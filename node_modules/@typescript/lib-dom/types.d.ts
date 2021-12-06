@@ -1784,9 +1784,9 @@ interface WorkletOptions {
     credentials?: RequestCredentials;
 }
 
-type NodeFilter = ((node: Node) => number) | { acceptNode(node: Node): number; };
+type NodeFilter = ((node: Node) => number) | { acceptNode(node: Node): number; }
 
-type XPathNSResolver = ((prefix: string | null) => string | null) | { lookupNamespaceURI(prefix: string | null): string | null; };
+type XPathNSResolver = ((prefix: string | null) => string | null) | { lookupNamespaceURI(prefix: string | null): string | null; }
 
 /** The ANGLE_instanced_arrays extension is part of the WebGL API and allows to draw the same object, or groups of similar objects multiple times, if they share the same vertex data, primitive count and type. */
 interface ANGLE_instanced_arrays {
@@ -1846,7 +1846,7 @@ interface AbortController {
 declare interface AbortControllerConstructor {
     prototype: AbortController;
     new(): AbortController;
-};
+}
 
 interface AbortSignalEventMap {
     "abort": Event;
@@ -1867,7 +1867,7 @@ declare interface AbortSignalConstructor {
     prototype: AbortSignal;
     new(): AbortSignal;
     abort(reason?: any): AbortSignal;
-};
+}
 
 interface AbstractRange {
     /** Returns true if range is collapsed, and false otherwise. */
@@ -1885,7 +1885,7 @@ interface AbstractRange {
 declare interface AbstractRangeConstructor {
     prototype: AbstractRange;
     new(): AbstractRange;
-};
+}
 
 interface AbstractWorkerEventMap {
     "error": ErrorEvent;
@@ -1915,7 +1915,7 @@ interface AnalyserNode extends AudioNode {
 declare interface AnalyserNodeConstructor {
     prototype: AnalyserNode;
     new(context: BaseAudioContext, options?: AnalyserOptions): AnalyserNode;
-};
+}
 
 interface Animatable {
     animate(keyframes: Keyframe[] | PropertyIndexedKeyframes | null, options?: number | KeyframeAnimationOptions): Animation;
@@ -1960,7 +1960,7 @@ interface Animation extends EventTarget {
 declare interface AnimationConstructor {
     prototype: Animation;
     new(effect?: AnimationEffect | null, timeline?: AnimationTimeline | null): Animation;
-};
+}
 
 interface AnimationEffect {
     getComputedTiming(): ComputedEffectTiming;
@@ -1971,7 +1971,7 @@ interface AnimationEffect {
 declare interface AnimationEffectConstructor {
     prototype: AnimationEffect;
     new(): AnimationEffect;
-};
+}
 
 /** Events providing information related to animations. */
 interface AnimationEvent extends Event {
@@ -1983,7 +1983,7 @@ interface AnimationEvent extends Event {
 declare interface AnimationEventConstructor {
     prototype: AnimationEvent;
     new(type: string, animationEventInitDict?: AnimationEventInit): AnimationEvent;
-};
+}
 
 interface AnimationFrameProvider {
     cancelAnimationFrame(handle: number): void;
@@ -1998,7 +1998,7 @@ interface AnimationPlaybackEvent extends Event {
 declare interface AnimationPlaybackEventConstructor {
     prototype: AnimationPlaybackEvent;
     new(type: string, eventInitDict?: AnimationPlaybackEventInit): AnimationPlaybackEvent;
-};
+}
 
 interface AnimationTimeline {
     readonly currentTime: number | null;
@@ -2007,7 +2007,7 @@ interface AnimationTimeline {
 declare interface AnimationTimelineConstructor {
     prototype: AnimationTimeline;
     new(): AnimationTimeline;
-};
+}
 
 /** A DOM element's attribute as an object. In most DOM methods, you will probably directly retrieve the attribute as a string (e.g., Element.getAttribute(), but certain functions (e.g., Element.getAttributeNode()) or means of iterating give Attr types. */
 interface Attr extends Node {
@@ -2024,7 +2024,7 @@ interface Attr extends Node {
 declare interface AttrConstructor {
     prototype: Attr;
     new(): Attr;
-};
+}
 
 /** A short audio asset residing in memory, created from an audio file using the AudioContext.decodeAudioData() method, or from raw data using AudioContext.createBuffer(). Once put into an AudioBuffer, the audio can then be played by being passed into an AudioBufferSourceNode. */
 interface AudioBuffer {
@@ -2040,7 +2040,7 @@ interface AudioBuffer {
 declare interface AudioBufferConstructor {
     prototype: AudioBuffer;
     new(options: AudioBufferOptions): AudioBuffer;
-};
+}
 
 /** An AudioScheduledSourceNode which represents an audio source consisting of in-memory audio data, stored in an AudioBuffer. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network. */
 interface AudioBufferSourceNode extends AudioScheduledSourceNode {
@@ -2060,7 +2060,7 @@ interface AudioBufferSourceNode extends AudioScheduledSourceNode {
 declare interface AudioBufferSourceNodeConstructor {
     prototype: AudioBufferSourceNode;
     new(context: BaseAudioContext, options?: AudioBufferSourceOptions): AudioBufferSourceNode;
-};
+}
 
 /** An audio-processing graph built from audio modules linked together, each represented by an AudioNode. */
 interface AudioContext extends BaseAudioContext {
@@ -2081,7 +2081,7 @@ interface AudioContext extends BaseAudioContext {
 declare interface AudioContextConstructor {
     prototype: AudioContext;
     new(contextOptions?: AudioContextOptions): AudioContext;
-};
+}
 
 /** AudioDestinationNode has no output (as it is the output, no more AudioNode can be linked after it in the audio graph) and one input. The number of channels in the input must be between 0 and the maxChannelCount value or an exception is raised. */
 interface AudioDestinationNode extends AudioNode {
@@ -2091,7 +2091,7 @@ interface AudioDestinationNode extends AudioNode {
 declare interface AudioDestinationNodeConstructor {
     prototype: AudioDestinationNode;
     new(): AudioDestinationNode;
-};
+}
 
 /** The position and orientation of the unique person listening to the audio scene, and is used in audio spatialization. All PannerNodes spatialize in relation to the AudioListener stored in the BaseAudioContext.listener attribute. */
 interface AudioListener {
@@ -2113,7 +2113,7 @@ interface AudioListener {
 declare interface AudioListenerConstructor {
     prototype: AudioListener;
     new(): AudioListener;
-};
+}
 
 /** A generic interface for representing an audio processing module. Examples include: */
 interface AudioNode extends EventTarget {
@@ -2137,7 +2137,7 @@ interface AudioNode extends EventTarget {
 declare interface AudioNodeConstructor {
     prototype: AudioNode;
     new(): AudioNode;
-};
+}
 
 /** The Web Audio API's AudioParam interface represents an audio-related parameter, usually a parameter of an AudioNode (such as GainNode.gain). */
 interface AudioParam {
@@ -2158,7 +2158,7 @@ interface AudioParam {
 declare interface AudioParamConstructor {
     prototype: AudioParam;
     new(): AudioParam;
-};
+}
 
 interface AudioParamMap {
     forEach(callbackfn: (value: AudioParam, key: string, parent: AudioParamMap) => void, thisArg?: any): void;
@@ -2167,7 +2167,7 @@ interface AudioParamMap {
 declare interface AudioParamMapConstructor {
     prototype: AudioParamMap;
     new(): AudioParamMap;
-};
+}
 
 /**
  * The Web Audio API events that occur when a ScriptProcessorNode input buffer is ready to be processed.
@@ -2186,7 +2186,7 @@ interface AudioProcessingEvent extends Event {
 declare interface AudioProcessingEventConstructor {
     prototype: AudioProcessingEvent;
     new(type: string, eventInitDict: AudioProcessingEventInit): AudioProcessingEvent;
-};
+}
 
 interface AudioScheduledSourceNodeEventMap {
     "ended": Event;
@@ -2205,7 +2205,7 @@ interface AudioScheduledSourceNode extends AudioNode {
 declare interface AudioScheduledSourceNodeConstructor {
     prototype: AudioScheduledSourceNode;
     new(): AudioScheduledSourceNode;
-};
+}
 
 /** Available only in secure contexts. */
 interface AudioWorklet extends Worklet {
@@ -2214,7 +2214,7 @@ interface AudioWorklet extends Worklet {
 declare interface AudioWorkletConstructor {
     prototype: AudioWorklet;
     new(): AudioWorklet;
-};
+}
 
 interface AudioWorkletNodeEventMap {
     "processorerror": Event;
@@ -2234,7 +2234,7 @@ interface AudioWorkletNode extends AudioNode {
 declare interface AudioWorkletNodeConstructor {
     prototype: AudioWorkletNode;
     new(context: BaseAudioContext, name: string, options?: AudioWorkletNodeOptions): AudioWorkletNode;
-};
+}
 
 /** Available only in secure contexts. */
 interface AuthenticatorAssertionResponse extends AuthenticatorResponse {
@@ -2246,7 +2246,7 @@ interface AuthenticatorAssertionResponse extends AuthenticatorResponse {
 declare interface AuthenticatorAssertionResponseConstructor {
     prototype: AuthenticatorAssertionResponse;
     new(): AuthenticatorAssertionResponse;
-};
+}
 
 /** Available only in secure contexts. */
 interface AuthenticatorAttestationResponse extends AuthenticatorResponse {
@@ -2256,7 +2256,7 @@ interface AuthenticatorAttestationResponse extends AuthenticatorResponse {
 declare interface AuthenticatorAttestationResponseConstructor {
     prototype: AuthenticatorAttestationResponse;
     new(): AuthenticatorAttestationResponse;
-};
+}
 
 /** Available only in secure contexts. */
 interface AuthenticatorResponse {
@@ -2266,7 +2266,7 @@ interface AuthenticatorResponse {
 declare interface AuthenticatorResponseConstructor {
     prototype: AuthenticatorResponse;
     new(): AuthenticatorResponse;
-};
+}
 
 interface BarProp {
     readonly visible: boolean;
@@ -2275,7 +2275,7 @@ interface BarProp {
 declare interface BarPropConstructor {
     prototype: BarProp;
     new(): BarProp;
-};
+}
 
 interface BaseAudioContextEventMap {
     "statechange": Event;
@@ -2319,7 +2319,7 @@ interface BaseAudioContext extends EventTarget {
 declare interface BaseAudioContextConstructor {
     prototype: BaseAudioContext;
     new(): BaseAudioContext;
-};
+}
 
 /** The beforeunload event is fired when the window, the document and its resources are about to be unloaded. */
 interface BeforeUnloadEvent extends Event {
@@ -2329,7 +2329,7 @@ interface BeforeUnloadEvent extends Event {
 declare interface BeforeUnloadEventConstructor {
     prototype: BeforeUnloadEvent;
     new(): BeforeUnloadEvent;
-};
+}
 
 /** A simple low-order filter, and is created using the AudioContext.createBiquadFilter() method. It is an AudioNode that can represent different kinds of filters, tone control devices, and graphic equalizers. */
 interface BiquadFilterNode extends AudioNode {
@@ -2344,7 +2344,7 @@ interface BiquadFilterNode extends AudioNode {
 declare interface BiquadFilterNodeConstructor {
     prototype: BiquadFilterNode;
     new(context: BaseAudioContext, options?: BiquadFilterOptions): BiquadFilterNode;
-};
+}
 
 /** A file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system. */
 interface Blob {
@@ -2359,7 +2359,7 @@ interface Blob {
 declare interface BlobConstructor {
     prototype: Blob;
     new(blobParts?: BlobPart[], options?: BlobPropertyBag): Blob;
-};
+}
 
 interface BlobEvent extends Event {
     readonly data: Blob;
@@ -2369,7 +2369,7 @@ interface BlobEvent extends Event {
 declare interface BlobEventConstructor {
     prototype: BlobEvent;
     new(type: string, eventInitDict: BlobEventInit): BlobEvent;
-};
+}
 
 interface Body {
     readonly body: ReadableStream<Uint8Array> | null;
@@ -2404,7 +2404,7 @@ interface BroadcastChannel extends EventTarget {
 declare interface BroadcastChannelConstructor {
     prototype: BroadcastChannel;
     new(name: string): BroadcastChannel;
-};
+}
 
 /** This Streams API interface provides a built-in byte length queuing strategy that can be used when constructing streams. */
 interface ByteLengthQueuingStrategy extends QueuingStrategy<ArrayBufferView> {
@@ -2415,7 +2415,7 @@ interface ByteLengthQueuingStrategy extends QueuingStrategy<ArrayBufferView> {
 declare interface ByteLengthQueuingStrategyConstructor {
     prototype: ByteLengthQueuingStrategy;
     new(init: QueuingStrategyInit): ByteLengthQueuingStrategy;
-};
+}
 
 /** A CDATA section that can be used within XML to include extended portions of unescaped text. The symbols < and & don’t need escaping as they normally do when inside a CDATA section. */
 interface CDATASection extends Text {
@@ -2424,7 +2424,7 @@ interface CDATASection extends Text {
 declare interface CDATASectionConstructor {
     prototype: CDATASection;
     new(): CDATASection;
-};
+}
 
 interface CSSAnimation extends Animation {
     readonly animationName: string;
@@ -2437,7 +2437,7 @@ interface CSSAnimation extends Animation {
 declare interface CSSAnimationConstructor {
     prototype: CSSAnimation;
     new(): CSSAnimation;
-};
+}
 
 /** A single condition CSS at-rule, which consists of a condition and a statement block. It is a child of CSSGroupingRule. */
 interface CSSConditionRule extends CSSGroupingRule {
@@ -2447,7 +2447,7 @@ interface CSSConditionRule extends CSSGroupingRule {
 declare interface CSSConditionRuleConstructor {
     prototype: CSSConditionRule;
     new(): CSSConditionRule;
-};
+}
 
 interface CSSCounterStyleRule extends CSSRule {
     additiveSymbols: string;
@@ -2466,7 +2466,7 @@ interface CSSCounterStyleRule extends CSSRule {
 declare interface CSSCounterStyleRuleConstructor {
     prototype: CSSCounterStyleRule;
     new(): CSSCounterStyleRule;
-};
+}
 
 interface CSSFontFaceRule extends CSSRule {
     readonly style: CSSStyleDeclaration;
@@ -2475,7 +2475,7 @@ interface CSSFontFaceRule extends CSSRule {
 declare interface CSSFontFaceRuleConstructor {
     prototype: CSSFontFaceRule;
     new(): CSSFontFaceRule;
-};
+}
 
 /** Any CSS at-rule that contains other rules nested within it. */
 interface CSSGroupingRule extends CSSRule {
@@ -2487,7 +2487,7 @@ interface CSSGroupingRule extends CSSRule {
 declare interface CSSGroupingRuleConstructor {
     prototype: CSSGroupingRule;
     new(): CSSGroupingRule;
-};
+}
 
 interface CSSImportRule extends CSSRule {
     readonly href: string;
@@ -2498,7 +2498,7 @@ interface CSSImportRule extends CSSRule {
 declare interface CSSImportRuleConstructor {
     prototype: CSSImportRule;
     new(): CSSImportRule;
-};
+}
 
 /** An object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a @keyframes at-rule. It implements the CSSRule interface with a type value of 8 (CSSRule.KEYFRAME_RULE). */
 interface CSSKeyframeRule extends CSSRule {
@@ -2509,7 +2509,7 @@ interface CSSKeyframeRule extends CSSRule {
 declare interface CSSKeyframeRuleConstructor {
     prototype: CSSKeyframeRule;
     new(): CSSKeyframeRule;
-};
+}
 
 /** An object representing a complete set of keyframes for a CSS animation. It corresponds to the contains of a whole @keyframes at-rule. It implements the CSSRule interface with a type value of 7 (CSSRule.KEYFRAMES_RULE). */
 interface CSSKeyframesRule extends CSSRule {
@@ -2523,7 +2523,7 @@ interface CSSKeyframesRule extends CSSRule {
 declare interface CSSKeyframesRuleConstructor {
     prototype: CSSKeyframesRule;
     new(): CSSKeyframesRule;
-};
+}
 
 /** A single CSS @media rule. It implements the CSSConditionRule interface, and therefore the CSSGroupingRule and the CSSRule interface with a type value of 4 (CSSRule.MEDIA_RULE). */
 interface CSSMediaRule extends CSSConditionRule {
@@ -2533,7 +2533,7 @@ interface CSSMediaRule extends CSSConditionRule {
 declare interface CSSMediaRuleConstructor {
     prototype: CSSMediaRule;
     new(): CSSMediaRule;
-};
+}
 
 /** An object representing a single CSS @namespace at-rule. It implements the CSSRule interface, with a type value of 10 (CSSRule.NAMESPACE_RULE). */
 interface CSSNamespaceRule extends CSSRule {
@@ -2544,7 +2544,7 @@ interface CSSNamespaceRule extends CSSRule {
 declare interface CSSNamespaceRuleConstructor {
     prototype: CSSNamespaceRule;
     new(): CSSNamespaceRule;
-};
+}
 
 /** CSSPageRule is an interface representing a single CSS @page rule. It implements the CSSRule interface with a type value of 6 (CSSRule.PAGE_RULE). */
 interface CSSPageRule extends CSSGroupingRule {
@@ -2555,7 +2555,7 @@ interface CSSPageRule extends CSSGroupingRule {
 declare interface CSSPageRuleConstructor {
     prototype: CSSPageRule;
     new(): CSSPageRule;
-};
+}
 
 /** A single CSS rule. There are several types of rules, listed in the Type constants section below. */
 interface CSSRule {
@@ -2589,7 +2589,7 @@ declare interface CSSRuleConstructor {
     readonly PAGE_RULE: number;
     readonly STYLE_RULE: number;
     readonly SUPPORTS_RULE: number;
-};
+}
 
 /** A CSSRuleList is an (indirect-modify only) array-like object containing an ordered collection of CSSRule objects. */
 interface CSSRuleList {
@@ -2601,7 +2601,7 @@ interface CSSRuleList {
 declare interface CSSRuleListConstructor {
     prototype: CSSRuleList;
     new(): CSSRuleList;
-};
+}
 
 /** An object that is a CSS declaration block, and exposes style information and various style-related methods and properties. */
 interface CSSStyleDeclaration {
@@ -3134,7 +3134,7 @@ interface CSSStyleDeclaration {
 declare interface CSSStyleDeclarationConstructor {
     prototype: CSSStyleDeclaration;
     new(): CSSStyleDeclaration;
-};
+}
 
 /** CSSStyleRule represents a single CSS style rule. It implements the CSSRule interface with a type value of 1 (CSSRule.STYLE_RULE). */
 interface CSSStyleRule extends CSSRule {
@@ -3145,7 +3145,7 @@ interface CSSStyleRule extends CSSRule {
 declare interface CSSStyleRuleConstructor {
     prototype: CSSStyleRule;
     new(): CSSStyleRule;
-};
+}
 
 /** A single CSS style sheet. It inherits properties and methods from its parent, StyleSheet. */
 interface CSSStyleSheet extends StyleSheet {
@@ -3164,7 +3164,7 @@ interface CSSStyleSheet extends StyleSheet {
 declare interface CSSStyleSheetConstructor {
     prototype: CSSStyleSheet;
     new(options?: CSSStyleSheetInit): CSSStyleSheet;
-};
+}
 
 /** An object representing a single CSS @supports at-rule. It implements the CSSConditionRule interface, and therefore the CSSRule and CSSGroupingRule interfaces with a type value of 12 (CSSRule.SUPPORTS_RULE). */
 interface CSSSupportsRule extends CSSConditionRule {
@@ -3173,7 +3173,7 @@ interface CSSSupportsRule extends CSSConditionRule {
 declare interface CSSSupportsRuleConstructor {
     prototype: CSSSupportsRule;
     new(): CSSSupportsRule;
-};
+}
 
 interface CSSTransition extends Animation {
     readonly transitionProperty: string;
@@ -3186,7 +3186,7 @@ interface CSSTransition extends Animation {
 declare interface CSSTransitionConstructor {
     prototype: CSSTransition;
     new(): CSSTransition;
-};
+}
 
 /**
  * Provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.
@@ -3205,7 +3205,7 @@ interface Cache {
 declare interface CacheConstructor {
     prototype: Cache;
     new(): Cache;
-};
+}
 
 /**
  * The storage for Cache objects.
@@ -3222,7 +3222,7 @@ interface CacheStorage {
 declare interface CacheStorageConstructor {
     prototype: CacheStorage;
     new(): CacheStorage;
-};
+}
 
 interface CanvasCompositing {
     globalAlpha: number;
@@ -3275,7 +3275,7 @@ interface CanvasGradient {
 declare interface CanvasGradientConstructor {
     prototype: CanvasGradient;
     new(): CanvasGradient;
-};
+}
 
 interface CanvasImageData {
     createImageData(sw: number, sh: number, settings?: ImageDataSettings): ImageData;
@@ -3321,7 +3321,7 @@ interface CanvasPattern {
 declare interface CanvasPatternConstructor {
     prototype: CanvasPattern;
     new(): CanvasPattern;
-};
+}
 
 interface CanvasRect {
     clearRect(x: number, y: number, w: number, h: number): void;
@@ -3338,7 +3338,7 @@ interface CanvasRenderingContext2D extends CanvasCompositing, CanvasDrawImage, C
 declare interface CanvasRenderingContext2DConstructor {
     prototype: CanvasRenderingContext2D;
     new(): CanvasRenderingContext2D;
-};
+}
 
 interface CanvasShadowStyles {
     shadowBlur: number;
@@ -3388,7 +3388,7 @@ interface ChannelMergerNode extends AudioNode {
 declare interface ChannelMergerNodeConstructor {
     prototype: ChannelMergerNode;
     new(context: BaseAudioContext, options?: ChannelMergerOptions): ChannelMergerNode;
-};
+}
 
 /** The ChannelSplitterNode interface, often used in conjunction with its opposite, ChannelMergerNode, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
 interface ChannelSplitterNode extends AudioNode {
@@ -3397,7 +3397,7 @@ interface ChannelSplitterNode extends AudioNode {
 declare interface ChannelSplitterNodeConstructor {
     prototype: ChannelSplitterNode;
     new(context: BaseAudioContext, options?: ChannelSplitterOptions): ChannelSplitterNode;
-};
+}
 
 /** The CharacterData abstract interface represents a Node object that contains characters. This is an abstract interface, meaning there aren't any object of type CharacterData: it is implemented by other interfaces, like Text, Comment, or ProcessingInstruction which aren't abstract. */
 interface CharacterData extends Node, ChildNode, NonDocumentTypeChildNode {
@@ -3414,7 +3414,7 @@ interface CharacterData extends Node, ChildNode, NonDocumentTypeChildNode {
 declare interface CharacterDataConstructor {
     prototype: CharacterData;
     new(): CharacterData;
-};
+}
 
 interface ChildNode extends Node {
     /**
@@ -3454,7 +3454,7 @@ interface Clipboard extends EventTarget {
 declare interface ClipboardConstructor {
     prototype: Clipboard;
     new(): Clipboard;
-};
+}
 
 /** Events providing information related to modification of the clipboard, that is cut, copy, and paste events. */
 interface ClipboardEvent extends Event {
@@ -3464,7 +3464,7 @@ interface ClipboardEvent extends Event {
 declare interface ClipboardEventConstructor {
     prototype: ClipboardEvent;
     new(type: string, eventInitDict?: ClipboardEventInit): ClipboardEvent;
-};
+}
 
 interface ClipboardItem {
     readonly types: ReadonlyArray<string>;
@@ -3474,7 +3474,7 @@ interface ClipboardItem {
 declare interface ClipboardItemConstructor {
     prototype: ClipboardItem;
     new(items: Record<string, ClipboardItemDataType | PromiseLike<ClipboardItemDataType>>, options?: ClipboardItemOptions): ClipboardItem;
-};
+}
 
 /** A CloseEvent is sent to clients using WebSockets when the connection is closed. This is delivered to the listener indicated by the WebSocket object's onclose attribute. */
 interface CloseEvent extends Event {
@@ -3489,7 +3489,7 @@ interface CloseEvent extends Event {
 declare interface CloseEventConstructor {
     prototype: CloseEvent;
     new(type: string, eventInitDict?: CloseEventInit): CloseEvent;
-};
+}
 
 /** Textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view. */
 interface Comment extends CharacterData {
@@ -3498,7 +3498,7 @@ interface Comment extends CharacterData {
 declare interface CommentConstructor {
     prototype: Comment;
     new(data?: string): Comment;
-};
+}
 
 /** The DOM CompositionEvent represents events that occur due to the user indirectly entering text. */
 interface CompositionEvent extends UIEvent {
@@ -3510,7 +3510,7 @@ interface CompositionEvent extends UIEvent {
 declare interface CompositionEventConstructor {
     prototype: CompositionEvent;
     new(type: string, eventInitDict?: CompositionEventInit): CompositionEvent;
-};
+}
 
 interface ConstantSourceNode extends AudioScheduledSourceNode {
     readonly offset: AudioParam;
@@ -3523,7 +3523,7 @@ interface ConstantSourceNode extends AudioScheduledSourceNode {
 declare interface ConstantSourceNodeConstructor {
     prototype: ConstantSourceNode;
     new(context: BaseAudioContext, options?: ConstantSourceOptions): ConstantSourceNode;
-};
+}
 
 /** An AudioNode that performs a Linear Convolution on a given AudioBuffer, often used to achieve a reverb effect. A ConvolverNode always has exactly one input and one output. */
 interface ConvolverNode extends AudioNode {
@@ -3534,7 +3534,7 @@ interface ConvolverNode extends AudioNode {
 declare interface ConvolverNodeConstructor {
     prototype: ConvolverNode;
     new(context: BaseAudioContext, options?: ConvolverOptions): ConvolverNode;
-};
+}
 
 /** This Streams API interface provides a built-in byte length queuing strategy that can be used when constructing streams. */
 interface CountQueuingStrategy extends QueuingStrategy {
@@ -3545,7 +3545,7 @@ interface CountQueuingStrategy extends QueuingStrategy {
 declare interface CountQueuingStrategyConstructor {
     prototype: CountQueuingStrategy;
     new(init: QueuingStrategyInit): CountQueuingStrategy;
-};
+}
 
 /** Available only in secure contexts. */
 interface Credential {
@@ -3556,7 +3556,7 @@ interface Credential {
 declare interface CredentialConstructor {
     prototype: Credential;
     new(): Credential;
-};
+}
 
 /** Available only in secure contexts. */
 interface CredentialsContainer {
@@ -3569,7 +3569,7 @@ interface CredentialsContainer {
 declare interface CredentialsContainerConstructor {
     prototype: CredentialsContainer;
     new(): CredentialsContainer;
-};
+}
 
 /** Basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives. */
 interface Crypto {
@@ -3583,7 +3583,7 @@ interface Crypto {
 declare interface CryptoConstructor {
     prototype: Crypto;
     new(): Crypto;
-};
+}
 
 /**
  * The CryptoKey dictionary of the Web Crypto API represents a cryptographic key.
@@ -3599,7 +3599,7 @@ interface CryptoKey {
 declare interface CryptoKeyConstructor {
     prototype: CryptoKey;
     new(): CryptoKey;
-};
+}
 
 interface CustomElementRegistry {
     define(name: string, constructor: CustomElementConstructor, options?: ElementDefinitionOptions): void;
@@ -3611,7 +3611,7 @@ interface CustomElementRegistry {
 declare interface CustomElementRegistryConstructor {
     prototype: CustomElementRegistry;
     new(): CustomElementRegistry;
-};
+}
 
 interface CustomEvent<T = any> extends Event {
     /** Returns any custom data event was created with. Typically used for synthetic events. */
@@ -3623,7 +3623,7 @@ interface CustomEvent<T = any> extends Event {
 declare interface CustomEventConstructor {
     prototype: CustomEvent;
     new <T>(type: string, eventInitDict?: CustomEventInit<T>): CustomEvent<T>;
-};
+}
 
 /** An abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API. */
 interface DOMException extends Error {
@@ -3685,7 +3685,7 @@ declare interface DOMExceptionConstructor {
     readonly URL_MISMATCH_ERR: number;
     readonly VALIDATION_ERR: number;
     readonly WRONG_DOCUMENT_ERR: number;
-};
+}
 
 /** An object providing methods which are not dependent on any particular document. Such an object is returned by the Document.implementation property. */
 interface DOMImplementation {
@@ -3699,7 +3699,7 @@ interface DOMImplementation {
 declare interface DOMImplementationConstructor {
     prototype: DOMImplementation;
     new(): DOMImplementation;
-};
+}
 
 interface DOMMatrix extends DOMMatrixReadOnly {
     a: number;
@@ -3744,7 +3744,7 @@ declare interface DOMMatrixConstructor {
     fromFloat32Array(array32: Float32Array): DOMMatrix;
     fromFloat64Array(array64: Float64Array): DOMMatrix;
     fromMatrix(other?: DOMMatrixInit): DOMMatrix;
-};
+}
 
 type SVGMatrix = DOMMatrix;
 
@@ -3803,7 +3803,7 @@ declare interface DOMMatrixReadOnlyConstructor {
     fromFloat64Array(array64: Float64Array): DOMMatrixReadOnly;
     fromMatrix(other?: DOMMatrixInit): DOMMatrixReadOnly;
     toString(): string;
-};
+}
 
 /** Provides the ability to parse XML or HTML source code from a string into a DOM Document. */
 interface DOMParser {
@@ -3822,7 +3822,7 @@ interface DOMParser {
 declare interface DOMParserConstructor {
     prototype: DOMParser;
     new(): DOMParser;
-};
+}
 
 interface DOMPoint extends DOMPointReadOnly {
     w: number;
@@ -3835,7 +3835,7 @@ declare interface DOMPointConstructor {
     prototype: DOMPoint;
     new(x?: number, y?: number, z?: number, w?: number): DOMPoint;
     fromPoint(other?: DOMPointInit): DOMPoint;
-};
+}
 
 type SVGPoint = DOMPoint;
 
@@ -3853,7 +3853,7 @@ declare interface DOMPointReadOnlyConstructor {
     prototype: DOMPointReadOnly;
     new(x?: number, y?: number, z?: number, w?: number): DOMPointReadOnly;
     fromPoint(other?: DOMPointInit): DOMPointReadOnly;
-};
+}
 
 interface DOMQuad {
     readonly p1: DOMPoint;
@@ -3869,7 +3869,7 @@ declare interface DOMQuadConstructor {
     new(p1?: DOMPointInit, p2?: DOMPointInit, p3?: DOMPointInit, p4?: DOMPointInit): DOMQuad;
     fromQuad(other?: DOMQuadInit): DOMQuad;
     fromRect(other?: DOMRectInit): DOMQuad;
-};
+}
 
 interface DOMRect extends DOMRectReadOnly {
     height: number;
@@ -3882,7 +3882,7 @@ declare interface DOMRectConstructor {
     prototype: DOMRect;
     new(x?: number, y?: number, width?: number, height?: number): DOMRect;
     fromRect(other?: DOMRectInit): DOMRect;
-};
+}
 
 type SVGRect = DOMRect;
 
@@ -3895,7 +3895,7 @@ interface DOMRectList {
 declare interface DOMRectListConstructor {
     prototype: DOMRectList;
     new(): DOMRectList;
-};
+}
 
 interface DOMRectReadOnly {
     readonly bottom: number;
@@ -3913,7 +3913,7 @@ declare interface DOMRectReadOnlyConstructor {
     prototype: DOMRectReadOnly;
     new(x?: number, y?: number, width?: number, height?: number): DOMRectReadOnly;
     fromRect(other?: DOMRectInit): DOMRectReadOnly;
-};
+}
 
 /** A type returned by some APIs which contains a list of DOMString (strings). */
 interface DOMStringList {
@@ -3929,7 +3929,7 @@ interface DOMStringList {
 declare interface DOMStringListConstructor {
     prototype: DOMStringList;
     new(): DOMStringList;
-};
+}
 
 /** Used by the dataset HTML attribute to represent data for custom attributes added to elements. */
 interface DOMStringMap {
@@ -3939,7 +3939,7 @@ interface DOMStringMap {
 declare interface DOMStringMapConstructor {
     prototype: DOMStringMap;
     new(): DOMStringMap;
-};
+}
 
 /** A set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox, or HTMLOutputElement.htmlFor. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive. */
 interface DOMTokenList {
@@ -4005,7 +4005,7 @@ interface DOMTokenList {
 declare interface DOMTokenListConstructor {
     prototype: DOMTokenList;
     new(): DOMTokenList;
-};
+}
 
 /** Used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see HTML Drag and Drop API. */
 interface DataTransfer {
@@ -4044,7 +4044,7 @@ interface DataTransfer {
 declare interface DataTransferConstructor {
     prototype: DataTransfer;
     new(): DataTransfer;
-};
+}
 
 /** One drag data item. During a drag operation, each drag event has a dataTransfer property which contains a list of drag data items. Each item in the list is a DataTransferItem object. */
 interface DataTransferItem {
@@ -4062,7 +4062,7 @@ interface DataTransferItem {
 declare interface DataTransferItemConstructor {
     prototype: DataTransferItem;
     new(): DataTransferItem;
-};
+}
 
 /** A list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList. */
 interface DataTransferItemList {
@@ -4081,7 +4081,7 @@ interface DataTransferItemList {
 declare interface DataTransferItemListConstructor {
     prototype: DataTransferItemList;
     new(): DataTransferItemList;
-};
+}
 
 /** A delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data and its propagation to the output. */
 interface DelayNode extends AudioNode {
@@ -4091,7 +4091,7 @@ interface DelayNode extends AudioNode {
 declare interface DelayNodeConstructor {
     prototype: DelayNode;
     new(context: BaseAudioContext, options?: DelayOptions): DelayNode;
-};
+}
 
 /**
  * The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation.
@@ -4107,7 +4107,7 @@ interface DeviceMotionEvent extends Event {
 declare interface DeviceMotionEventConstructor {
     prototype: DeviceMotionEvent;
     new(type: string, eventInitDict?: DeviceMotionEventInit): DeviceMotionEvent;
-};
+}
 
 /** Available only in secure contexts. */
 interface DeviceMotionEventAcceleration {
@@ -4137,7 +4137,7 @@ interface DeviceOrientationEvent extends Event {
 declare interface DeviceOrientationEventConstructor {
     prototype: DeviceOrientationEvent;
     new(type: string, eventInitDict?: DeviceOrientationEventInit): DeviceOrientationEvent;
-};
+}
 
 interface DocumentEventMap extends DocumentAndElementEventHandlersEventMap, GlobalEventHandlersEventMap {
     "fullscreenchange": Event;
@@ -4537,7 +4537,7 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
 declare interface DocumentConstructor {
     prototype: Document;
     new(): Document;
-};
+}
 
 interface DocumentAndElementEventHandlersEventMap {
     "copy": ClipboardEvent;
@@ -4564,7 +4564,7 @@ interface DocumentFragment extends Node, NonElementParentNode, ParentNode {
 declare interface DocumentFragmentConstructor {
     prototype: DocumentFragment;
     new(): DocumentFragment;
-};
+}
 
 interface DocumentOrShadowRoot {
     /**
@@ -4597,7 +4597,7 @@ interface DocumentTimeline extends AnimationTimeline {
 declare interface DocumentTimelineConstructor {
     prototype: DocumentTimeline;
     new(options?: DocumentTimelineOptions): DocumentTimeline;
-};
+}
 
 /** A Node containing a doctype. */
 interface DocumentType extends Node, ChildNode {
@@ -4610,7 +4610,7 @@ interface DocumentType extends Node, ChildNode {
 declare interface DocumentTypeConstructor {
     prototype: DocumentType;
     new(): DocumentType;
-};
+}
 
 /** A DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way. */
 interface DragEvent extends MouseEvent {
@@ -4621,7 +4621,7 @@ interface DragEvent extends MouseEvent {
 declare interface DragEventConstructor {
     prototype: DragEvent;
     new(type: string, eventInitDict?: DragEventInit): DragEvent;
-};
+}
 
 /** Inherits properties from its parent, AudioNode. */
 interface DynamicsCompressorNode extends AudioNode {
@@ -4636,7 +4636,7 @@ interface DynamicsCompressorNode extends AudioNode {
 declare interface DynamicsCompressorNodeConstructor {
     prototype: DynamicsCompressorNode;
     new(context: BaseAudioContext, options?: DynamicsCompressorOptions): DynamicsCompressorNode;
-};
+}
 
 interface EXT_blend_minmax {
     readonly MAX_EXT: GLenum;
@@ -4802,7 +4802,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
 declare interface ElementConstructor {
     prototype: Element;
     new(): Element;
-};
+}
 
 interface ElementCSSInlineStyle {
     readonly style: CSSStyleDeclaration;
@@ -4823,7 +4823,7 @@ interface ElementInternals extends ARIAMixin {
 declare interface ElementInternalsConstructor {
     prototype: ElementInternals;
     new(): ElementInternals;
-};
+}
 
 /** Events providing information related to errors in scripts or in files. */
 interface ErrorEvent extends Event {
@@ -4837,7 +4837,7 @@ interface ErrorEvent extends Event {
 declare interface ErrorEventConstructor {
     prototype: ErrorEvent;
     new(type: string, eventInitDict?: ErrorEventInit): ErrorEvent;
-};
+}
 
 /** An event which takes place in the DOM. */
 interface Event {
@@ -4889,7 +4889,7 @@ declare interface EventConstructor {
     readonly BUBBLING_PHASE: number;
     readonly CAPTURING_PHASE: number;
     readonly NONE: number;
-};
+}
 
 interface EventListener {
     (evt: Event): void;
@@ -4934,7 +4934,7 @@ declare interface EventSourceConstructor {
     readonly CLOSED: number;
     readonly CONNECTING: number;
     readonly OPEN: number;
-};
+}
 
 /** EventTarget is a DOM interface implemented by objects that can receive events and may have listeners for them. */
 interface EventTarget {
@@ -4963,7 +4963,7 @@ interface EventTarget {
 declare interface EventTargetConstructor {
     prototype: EventTarget;
     new(): EventTarget;
-};
+}
 
 /** @deprecated */
 interface External {
@@ -4977,7 +4977,7 @@ interface External {
 declare interface ExternalConstructor {
     prototype: External;
     new(): External;
-};
+}
 
 /** Provides information about files and allows JavaScript in a web page to access their content. */
 interface File extends Blob {
@@ -4989,7 +4989,7 @@ interface File extends Blob {
 declare interface FileConstructor {
     prototype: File;
     new(fileBits: BlobPart[], fileName: string, options?: FilePropertyBag): File;
-};
+}
 
 /** An object of this type is returned by the files property of the HTML <input> element; this lets you access the list of files selected with the <input type="file"> element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage. */
 interface FileList {
@@ -5001,7 +5001,7 @@ interface FileList {
 declare interface FileListConstructor {
     prototype: FileList;
     new(): FileList;
-};
+}
 
 interface FileReaderEventMap {
     "abort": ProgressEvent<FileReader>;
@@ -5043,7 +5043,7 @@ declare interface FileReaderConstructor {
     readonly DONE: number;
     readonly EMPTY: number;
     readonly LOADING: number;
-};
+}
 
 interface FileSystem {
     readonly name: string;
@@ -5053,7 +5053,7 @@ interface FileSystem {
 declare interface FileSystemConstructor {
     prototype: FileSystem;
     new(): FileSystem;
-};
+}
 
 interface FileSystemDirectoryEntry extends FileSystemEntry {
     createReader(): FileSystemDirectoryReader;
@@ -5064,7 +5064,7 @@ interface FileSystemDirectoryEntry extends FileSystemEntry {
 declare interface FileSystemDirectoryEntryConstructor {
     prototype: FileSystemDirectoryEntry;
     new(): FileSystemDirectoryEntry;
-};
+}
 
 /** Available only in secure contexts. */
 interface FileSystemDirectoryHandle extends FileSystemHandle {
@@ -5077,7 +5077,7 @@ interface FileSystemDirectoryHandle extends FileSystemHandle {
 declare interface FileSystemDirectoryHandleConstructor {
     prototype: FileSystemDirectoryHandle;
     new(): FileSystemDirectoryHandle;
-};
+}
 
 interface FileSystemDirectoryReader {
     readEntries(successCallback: FileSystemEntriesCallback, errorCallback?: ErrorCallback): void;
@@ -5086,7 +5086,7 @@ interface FileSystemDirectoryReader {
 declare interface FileSystemDirectoryReaderConstructor {
     prototype: FileSystemDirectoryReader;
     new(): FileSystemDirectoryReader;
-};
+}
 
 interface FileSystemEntry {
     readonly filesystem: FileSystem;
@@ -5100,7 +5100,7 @@ interface FileSystemEntry {
 declare interface FileSystemEntryConstructor {
     prototype: FileSystemEntry;
     new(): FileSystemEntry;
-};
+}
 
 interface FileSystemFileEntry extends FileSystemEntry {
     file(successCallback: FileCallback, errorCallback?: ErrorCallback): void;
@@ -5109,7 +5109,7 @@ interface FileSystemFileEntry extends FileSystemEntry {
 declare interface FileSystemFileEntryConstructor {
     prototype: FileSystemFileEntry;
     new(): FileSystemFileEntry;
-};
+}
 
 /** Available only in secure contexts. */
 interface FileSystemFileHandle extends FileSystemHandle {
@@ -5119,7 +5119,7 @@ interface FileSystemFileHandle extends FileSystemHandle {
 declare interface FileSystemFileHandleConstructor {
     prototype: FileSystemFileHandle;
     new(): FileSystemFileHandle;
-};
+}
 
 /** Available only in secure contexts. */
 interface FileSystemHandle {
@@ -5131,7 +5131,7 @@ interface FileSystemHandle {
 declare interface FileSystemHandleConstructor {
     prototype: FileSystemHandle;
     new(): FileSystemHandle;
-};
+}
 
 /** Focus-related events like focus, blur, focusin, or focusout. */
 interface FocusEvent extends UIEvent {
@@ -5141,7 +5141,7 @@ interface FocusEvent extends UIEvent {
 declare interface FocusEventConstructor {
     prototype: FocusEvent;
     new(type: string, eventInitDict?: FocusEventInit): FocusEvent;
-};
+}
 
 interface FontFace {
     ascentOverride: string;
@@ -5164,7 +5164,7 @@ interface FontFace {
 declare interface FontFaceConstructor {
     prototype: FontFace;
     new(family: string, source: string | BinaryData, descriptors?: FontFaceDescriptors): FontFace;
-};
+}
 
 interface FontFaceSetEventMap {
     "loading": Event;
@@ -5190,7 +5190,7 @@ interface FontFaceSet extends EventTarget {
 declare interface FontFaceSetConstructor {
     prototype: FontFaceSet;
     new(initialFaces: FontFace[]): FontFaceSet;
-};
+}
 
 interface FontFaceSetLoadEvent extends Event {
     readonly fontfaces: ReadonlyArray<FontFace>;
@@ -5199,7 +5199,7 @@ interface FontFaceSetLoadEvent extends Event {
 declare interface FontFaceSetLoadEventConstructor {
     prototype: FontFaceSetLoadEvent;
     new(type: string, eventInitDict?: FontFaceSetLoadEventInit): FontFaceSetLoadEvent;
-};
+}
 
 interface FontFaceSource {
     readonly fonts: FontFaceSet;
@@ -5219,7 +5219,7 @@ interface FormData {
 declare interface FormDataConstructor {
     prototype: FormData;
     new(form?: HTMLFormElement): FormData;
-};
+}
 
 interface FormDataEvent extends Event {
     /** Returns a FormData object representing names and values of elements associated to the target form. Operations on the FormData object will affect form data to be submitted. */
@@ -5229,7 +5229,7 @@ interface FormDataEvent extends Event {
 declare interface FormDataEventConstructor {
     prototype: FormDataEvent;
     new(type: string, eventInitDict: FormDataEventInit): FormDataEvent;
-};
+}
 
 /** A change in volume. It is an AudioNode audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A GainNode always has exactly one input and one output, both with the same number of channels. */
 interface GainNode extends AudioNode {
@@ -5239,7 +5239,7 @@ interface GainNode extends AudioNode {
 declare interface GainNodeConstructor {
     prototype: GainNode;
     new(context: BaseAudioContext, options?: GainOptions): GainNode;
-};
+}
 
 /**
  * This Gamepad API interface defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
@@ -5259,7 +5259,7 @@ interface Gamepad {
 declare interface GamepadConstructor {
     prototype: Gamepad;
     new(): Gamepad;
-};
+}
 
 /**
  * An individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.
@@ -5274,7 +5274,7 @@ interface GamepadButton {
 declare interface GamepadButtonConstructor {
     prototype: GamepadButton;
     new(): GamepadButton;
-};
+}
 
 /**
  * This Gamepad API interface contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.
@@ -5287,7 +5287,7 @@ interface GamepadEvent extends Event {
 declare interface GamepadEventConstructor {
     prototype: GamepadEvent;
     new(type: string, eventInitDict: GamepadEventInit): GamepadEvent;
-};
+}
 
 /** This Gamepad API interface represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware. */
 interface GamepadHapticActuator {
@@ -5297,7 +5297,7 @@ interface GamepadHapticActuator {
 declare interface GamepadHapticActuatorConstructor {
     prototype: GamepadHapticActuator;
     new(): GamepadHapticActuator;
-};
+}
 
 interface GenericTransformStream {
     readonly readable: ReadableStream;
@@ -5314,7 +5314,7 @@ interface Geolocation {
 declare interface GeolocationConstructor {
     prototype: Geolocation;
     new(): Geolocation;
-};
+}
 
 /** Available only in secure contexts. */
 interface GeolocationCoordinates {
@@ -5330,7 +5330,7 @@ interface GeolocationCoordinates {
 declare interface GeolocationCoordinatesConstructor {
     prototype: GeolocationCoordinates;
     new(): GeolocationCoordinates;
-};
+}
 
 /** Available only in secure contexts. */
 interface GeolocationPosition {
@@ -5341,7 +5341,7 @@ interface GeolocationPosition {
 declare interface GeolocationPositionConstructor {
     prototype: GeolocationPosition;
     new(): GeolocationPosition;
-};
+}
 
 interface GeolocationPositionError {
     readonly code: number;
@@ -5357,7 +5357,7 @@ declare interface GeolocationPositionErrorConstructor {
     readonly PERMISSION_DENIED: number;
     readonly POSITION_UNAVAILABLE: number;
     readonly TIMEOUT: number;
-};
+}
 
 interface GlobalEventHandlersEventMap {
     "abort": UIEvent;
@@ -5754,7 +5754,7 @@ interface HTMLAllCollection {
 declare interface HTMLAllCollectionConstructor {
     prototype: HTMLAllCollection;
     new(): HTMLAllCollection;
-};
+}
 
 /** Hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. */
 interface HTMLAnchorElement extends HTMLElement, HTMLHyperlinkElementUtils {
@@ -5805,7 +5805,7 @@ interface HTMLAnchorElement extends HTMLElement, HTMLHyperlinkElementUtils {
 declare interface HTMLAnchorElementConstructor {
     prototype: HTMLAnchorElement;
     new(): HTMLAnchorElement;
-};
+}
 
 /** Provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <area> elements. */
 interface HTMLAreaElement extends HTMLElement, HTMLHyperlinkElementUtils {
@@ -5836,7 +5836,7 @@ interface HTMLAreaElement extends HTMLElement, HTMLHyperlinkElementUtils {
 declare interface HTMLAreaElementConstructor {
     prototype: HTMLAreaElement;
     new(): HTMLAreaElement;
-};
+}
 
 /** Provides access to the properties of <audio> elements, as well as methods to manipulate them. It derives from the HTMLMediaElement interface. */
 interface HTMLAudioElement extends HTMLMediaElement {
@@ -5849,7 +5849,7 @@ interface HTMLAudioElement extends HTMLMediaElement {
 declare interface HTMLAudioElementConstructor {
     prototype: HTMLAudioElement;
     new(): HTMLAudioElement;
-};
+}
 
 /** A HTML line break element (<br>). It inherits from HTMLElement. */
 interface HTMLBRElement extends HTMLElement {
@@ -5867,7 +5867,7 @@ interface HTMLBRElement extends HTMLElement {
 declare interface HTMLBRElementConstructor {
     prototype: HTMLBRElement;
     new(): HTMLBRElement;
-};
+}
 
 /** Contains the base URI for a document. This object inherits all of the properties and methods as described in the HTMLElement interface. */
 interface HTMLBaseElement extends HTMLElement {
@@ -5884,7 +5884,7 @@ interface HTMLBaseElement extends HTMLElement {
 declare interface HTMLBaseElementConstructor {
     prototype: HTMLBaseElement;
     new(): HTMLBaseElement;
-};
+}
 
 interface HTMLBodyElementEventMap extends HTMLElementEventMap, WindowEventHandlersEventMap {
     "orientationchange": Event;
@@ -5915,7 +5915,7 @@ interface HTMLBodyElement extends HTMLElement, WindowEventHandlers {
 declare interface HTMLBodyElementConstructor {
     prototype: HTMLBodyElement;
     new(): HTMLBodyElement;
-};
+}
 
 /** Provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <button> elements. */
 interface HTMLButtonElement extends HTMLElement {
@@ -5962,7 +5962,7 @@ interface HTMLButtonElement extends HTMLElement {
 declare interface HTMLButtonElementConstructor {
     prototype: HTMLButtonElement;
     new(): HTMLButtonElement;
-};
+}
 
 /** Provides properties and methods for manipulating the layout and presentation of <canvas> elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface. */
 interface HTMLCanvasElement extends HTMLElement {
@@ -5995,7 +5995,7 @@ interface HTMLCanvasElement extends HTMLElement {
 declare interface HTMLCanvasElementConstructor {
     prototype: HTMLCanvasElement;
     new(): HTMLCanvasElement;
-};
+}
 
 /** A generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list. */
 interface HTMLCollectionBase {
@@ -6014,7 +6014,7 @@ interface HTMLCollection extends HTMLCollectionBase {
 declare interface HTMLCollectionConstructor {
     prototype: HTMLCollection;
     new(): HTMLCollection;
-};
+}
 
 interface HTMLCollectionOf<T extends Element> extends HTMLCollectionBase {
     item(index: number): T | null;
@@ -6035,7 +6035,7 @@ interface HTMLDListElement extends HTMLElement {
 declare interface HTMLDListElementConstructor {
     prototype: HTMLDListElement;
     new(): HTMLDListElement;
-};
+}
 
 /** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <data> elements. */
 interface HTMLDataElement extends HTMLElement {
@@ -6049,7 +6049,7 @@ interface HTMLDataElement extends HTMLElement {
 declare interface HTMLDataElementConstructor {
     prototype: HTMLDataElement;
     new(): HTMLDataElement;
-};
+}
 
 /** Provides special properties (beyond the HTMLElement object interface it also has available to it by inheritance) to manipulate <datalist> elements and their content. */
 interface HTMLDataListElement extends HTMLElement {
@@ -6064,7 +6064,7 @@ interface HTMLDataListElement extends HTMLElement {
 declare interface HTMLDataListElementConstructor {
     prototype: HTMLDataListElement;
     new(): HTMLDataListElement;
-};
+}
 
 interface HTMLDetailsElement extends HTMLElement {
     open: boolean;
@@ -6077,7 +6077,7 @@ interface HTMLDetailsElement extends HTMLElement {
 declare interface HTMLDetailsElementConstructor {
     prototype: HTMLDetailsElement;
     new(): HTMLDetailsElement;
-};
+}
 
 /** @deprecated this is not available in most browsers */
 interface HTMLDialogElement extends HTMLElement {
@@ -6101,7 +6101,7 @@ interface HTMLDirectoryElement extends HTMLElement {
 declare interface HTMLDirectoryElementConstructor {
     prototype: HTMLDirectoryElement;
     new(): HTMLDirectoryElement;
-};
+}
 
 /** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <div> elements. */
 interface HTMLDivElement extends HTMLElement {
@@ -6119,7 +6119,7 @@ interface HTMLDivElement extends HTMLElement {
 declare interface HTMLDivElementConstructor {
     prototype: HTMLDivElement;
     new(): HTMLDivElement;
-};
+}
 
 /** @deprecated use Document */
 interface HTMLDocument extends Document {
@@ -6133,7 +6133,7 @@ interface HTMLDocument extends Document {
 declare interface HTMLDocumentConstructor {
     prototype: HTMLDocument;
     new(): HTMLDocument;
-};
+}
 
 interface HTMLElementEventMap extends ElementEventMap, DocumentAndElementEventHandlersEventMap, GlobalEventHandlersEventMap {
 }
@@ -6168,7 +6168,7 @@ interface HTMLElement extends Element, DocumentAndElementEventHandlers, ElementC
 declare interface HTMLElementConstructor {
     prototype: HTMLElement;
     new(): HTMLElement;
-};
+}
 
 /** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <embed> elements. */
 interface HTMLEmbedElement extends HTMLElement {
@@ -6196,7 +6196,7 @@ interface HTMLEmbedElement extends HTMLElement {
 declare interface HTMLEmbedElementConstructor {
     prototype: HTMLEmbedElement;
     new(): HTMLEmbedElement;
-};
+}
 
 /** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <fieldset> elements. */
 interface HTMLFieldSetElement extends HTMLElement {
@@ -6231,7 +6231,7 @@ interface HTMLFieldSetElement extends HTMLElement {
 declare interface HTMLFieldSetElementConstructor {
     prototype: HTMLFieldSetElement;
     new(): HTMLFieldSetElement;
-};
+}
 
 /**
  * Implements the document object model (DOM) representation of the font element. The HTML Font Element <font> defines the font size, font face and color of text.
@@ -6257,7 +6257,7 @@ interface HTMLFontElement extends HTMLElement {
 declare interface HTMLFontElementConstructor {
     prototype: HTMLFontElement;
     new(): HTMLFontElement;
-};
+}
 
 /** A collection of HTML form control elements.  */
 interface HTMLFormControlsCollection extends HTMLCollectionBase {
@@ -6272,7 +6272,7 @@ interface HTMLFormControlsCollection extends HTMLCollectionBase {
 declare interface HTMLFormControlsCollectionConstructor {
     prototype: HTMLFormControlsCollection;
     new(): HTMLFormControlsCollection;
-};
+}
 
 /** A <form> element in the DOM; it allows access to and in some cases modification of aspects of the form, as well as access to its component elements. */
 interface HTMLFormElement extends HTMLElement {
@@ -6317,7 +6317,7 @@ interface HTMLFormElement extends HTMLElement {
 declare interface HTMLFormElementConstructor {
     prototype: HTMLFormElement;
     new(): HTMLFormElement;
-};
+}
 
 /** @deprecated */
 interface HTMLFrameElement extends HTMLElement {
@@ -6381,7 +6381,7 @@ interface HTMLFrameElement extends HTMLElement {
 declare interface HTMLFrameElementConstructor {
     prototype: HTMLFrameElement;
     new(): HTMLFrameElement;
-};
+}
 
 interface HTMLFrameSetElementEventMap extends HTMLElementEventMap, WindowEventHandlersEventMap {
 }
@@ -6411,7 +6411,7 @@ interface HTMLFrameSetElement extends HTMLElement, WindowEventHandlers {
 declare interface HTMLFrameSetElementConstructor {
     prototype: HTMLFrameSetElement;
     new(): HTMLFrameSetElement;
-};
+}
 
 /** Provides special properties (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating <hr> elements. */
 interface HTMLHRElement extends HTMLElement {
@@ -6443,7 +6443,7 @@ interface HTMLHRElement extends HTMLElement {
 declare interface HTMLHRElementConstructor {
     prototype: HTMLHRElement;
     new(): HTMLHRElement;
-};
+}
 
 /** Contains the descriptive information, or metadata, for a document. This object inherits all of the properties and methods described in the HTMLElement interface. */
 interface HTMLHeadElement extends HTMLElement {
@@ -6456,7 +6456,7 @@ interface HTMLHeadElement extends HTMLElement {
 declare interface HTMLHeadElementConstructor {
     prototype: HTMLHeadElement;
     new(): HTMLHeadElement;
-};
+}
 
 /** The different heading elements. It inherits methods and properties from the HTMLElement interface. */
 interface HTMLHeadingElement extends HTMLElement {
@@ -6474,7 +6474,7 @@ interface HTMLHeadingElement extends HTMLElement {
 declare interface HTMLHeadingElementConstructor {
     prototype: HTMLHeadingElement;
     new(): HTMLHeadingElement;
-};
+}
 
 /** Serves as the root node for a given HTML document. This object inherits the properties and methods described in the HTMLElement interface. */
 interface HTMLHtmlElement extends HTMLElement {
@@ -6492,7 +6492,7 @@ interface HTMLHtmlElement extends HTMLElement {
 declare interface HTMLHtmlElementConstructor {
     prototype: HTMLHtmlElement;
     new(): HTMLHtmlElement;
-};
+}
 
 interface HTMLHyperlinkElementUtils {
     /**
@@ -6620,7 +6620,7 @@ interface HTMLIFrameElement extends HTMLElement {
 declare interface HTMLIFrameElementConstructor {
     prototype: HTMLIFrameElement;
     new(): HTMLIFrameElement;
-};
+}
 
 /** Provides special properties and methods for manipulating <img> elements. */
 interface HTMLImageElement extends HTMLElement {
@@ -6694,7 +6694,7 @@ interface HTMLImageElement extends HTMLElement {
 declare interface HTMLImageElementConstructor {
     prototype: HTMLImageElement;
     new(): HTMLImageElement;
-};
+}
 
 /** Provides special properties and methods for manipulating the options, layout, and presentation of <input> elements. */
 interface HTMLInputElement extends HTMLElement {
@@ -6828,7 +6828,7 @@ interface HTMLInputElement extends HTMLElement {
 declare interface HTMLInputElementConstructor {
     prototype: HTMLInputElement;
     new(): HTMLInputElement;
-};
+}
 
 /** Exposes specific properties and methods (beyond those defined by regular HTMLElement interface it also has available to it by inheritance) for manipulating list elements. */
 interface HTMLLIElement extends HTMLElement {
@@ -6845,7 +6845,7 @@ interface HTMLLIElement extends HTMLElement {
 declare interface HTMLLIElementConstructor {
     prototype: HTMLLIElement;
     new(): HTMLLIElement;
-};
+}
 
 /** Gives access to properties specific to <label> elements. It inherits methods and properties from the base HTMLElement interface. */
 interface HTMLLabelElement extends HTMLElement {
@@ -6864,7 +6864,7 @@ interface HTMLLabelElement extends HTMLElement {
 declare interface HTMLLabelElementConstructor {
     prototype: HTMLLabelElement;
     new(): HTMLLabelElement;
-};
+}
 
 /** The HTMLLegendElement is an interface allowing to access properties of the <legend> elements. It inherits properties and methods from the HTMLElement interface. */
 interface HTMLLegendElement extends HTMLElement {
@@ -6881,7 +6881,7 @@ interface HTMLLegendElement extends HTMLElement {
 declare interface HTMLLegendElementConstructor {
     prototype: HTMLLegendElement;
     new(): HTMLLegendElement;
-};
+}
 
 /** Reference information for external resources and the relationship of those resources to a document and vice-versa. This object inherits all of the properties and methods of the HTMLElement interface. */
 interface HTMLLinkElement extends HTMLElement, LinkStyle {
@@ -6928,7 +6928,7 @@ interface HTMLLinkElement extends HTMLElement, LinkStyle {
 declare interface HTMLLinkElementConstructor {
     prototype: HTMLLinkElement;
     new(): HTMLLinkElement;
-};
+}
 
 /** Provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements. */
 interface HTMLMapElement extends HTMLElement {
@@ -6945,7 +6945,7 @@ interface HTMLMapElement extends HTMLElement {
 declare interface HTMLMapElementConstructor {
     prototype: HTMLMapElement;
     new(): HTMLMapElement;
-};
+}
 
 /**
  * Provides methods to manipulate <marquee> elements.
@@ -6988,7 +6988,7 @@ interface HTMLMarqueeElement extends HTMLElement {
 declare interface HTMLMarqueeElementConstructor {
     prototype: HTMLMarqueeElement;
     new(): HTMLMarqueeElement;
-};
+}
 
 interface HTMLMediaElementEventMap extends HTMLElementEventMap {
     "encrypted": MediaEncryptedEvent;
@@ -7087,7 +7087,7 @@ declare interface HTMLMediaElementConstructor {
     readonly NETWORK_IDLE: number;
     readonly NETWORK_LOADING: number;
     readonly NETWORK_NO_SOURCE: number;
-};
+}
 
 interface HTMLMenuElement extends HTMLElement {
     /** @deprecated */
@@ -7101,7 +7101,7 @@ interface HTMLMenuElement extends HTMLElement {
 declare interface HTMLMenuElementConstructor {
     prototype: HTMLMenuElement;
     new(): HTMLMenuElement;
-};
+}
 
 /** Contains descriptive metadata about a document. It inherits all of the properties and methods described in the HTMLElement interface. */
 interface HTMLMetaElement extends HTMLElement {
@@ -7126,7 +7126,7 @@ interface HTMLMetaElement extends HTMLElement {
 declare interface HTMLMetaElementConstructor {
     prototype: HTMLMetaElement;
     new(): HTMLMetaElement;
-};
+}
 
 /** The HTML <meter> elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of <meter> elements. */
 interface HTMLMeterElement extends HTMLElement {
@@ -7146,7 +7146,7 @@ interface HTMLMeterElement extends HTMLElement {
 declare interface HTMLMeterElementConstructor {
     prototype: HTMLMeterElement;
     new(): HTMLMeterElement;
-};
+}
 
 /** Provides special properties (beyond the regular methods and properties available through the HTMLElement interface they also have available to them by inheritance) for manipulating modification elements, that is <del> and <ins>. */
 interface HTMLModElement extends HTMLElement {
@@ -7163,7 +7163,7 @@ interface HTMLModElement extends HTMLElement {
 declare interface HTMLModElementConstructor {
     prototype: HTMLModElement;
     new(): HTMLModElement;
-};
+}
 
 /** Provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating ordered list elements. */
 interface HTMLOListElement extends HTMLElement {
@@ -7182,7 +7182,7 @@ interface HTMLOListElement extends HTMLElement {
 declare interface HTMLOListElementConstructor {
     prototype: HTMLOListElement;
     new(): HTMLOListElement;
-};
+}
 
 /** Provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <object> element, representing external resources. */
 interface HTMLObjectElement extends HTMLElement {
@@ -7262,7 +7262,7 @@ interface HTMLObjectElement extends HTMLElement {
 declare interface HTMLObjectElementConstructor {
     prototype: HTMLObjectElement;
     new(): HTMLObjectElement;
-};
+}
 
 /** Provides special properties and methods (beyond the regular HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of <optgroup> elements. */
 interface HTMLOptGroupElement extends HTMLElement {
@@ -7278,7 +7278,7 @@ interface HTMLOptGroupElement extends HTMLElement {
 declare interface HTMLOptGroupElementConstructor {
     prototype: HTMLOptGroupElement;
     new(): HTMLOptGroupElement;
-};
+}
 
 /** <option> elements and inherits all classes and methods of the HTMLElement interface. */
 interface HTMLOptionElement extends HTMLElement {
@@ -7306,7 +7306,7 @@ interface HTMLOptionElement extends HTMLElement {
 declare interface HTMLOptionElementConstructor {
     prototype: HTMLOptionElement;
     new(): HTMLOptionElement;
-};
+}
 
 /** HTMLOptionsCollection is an interface representing a collection of HTML option elements (in document order) and offers methods and properties for traversing the list as well as optionally altering its items. This type is returned solely by the "options" property of select. */
 interface HTMLOptionsCollection extends HTMLCollectionOf<HTMLOptionElement> {
@@ -7341,7 +7341,7 @@ interface HTMLOptionsCollection extends HTMLCollectionOf<HTMLOptionElement> {
 declare interface HTMLOptionsCollectionConstructor {
     prototype: HTMLOptionsCollection;
     new(): HTMLOptionsCollection;
-};
+}
 
 interface HTMLOrSVGElement {
     autofocus: boolean;
@@ -7382,7 +7382,7 @@ interface HTMLOutputElement extends HTMLElement {
 declare interface HTMLOutputElementConstructor {
     prototype: HTMLOutputElement;
     new(): HTMLOutputElement;
-};
+}
 
 /** Provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <p> elements. */
 interface HTMLParagraphElement extends HTMLElement {
@@ -7400,7 +7400,7 @@ interface HTMLParagraphElement extends HTMLElement {
 declare interface HTMLParagraphElementConstructor {
     prototype: HTMLParagraphElement;
     new(): HTMLParagraphElement;
-};
+}
 
 /** Provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <param> elements, representing a pair of a key and a value that acts as a parameter for an <object> element. */
 interface HTMLParamElement extends HTMLElement {
@@ -7427,7 +7427,7 @@ interface HTMLParamElement extends HTMLElement {
 declare interface HTMLParamElementConstructor {
     prototype: HTMLParamElement;
     new(): HTMLParamElement;
-};
+}
 
 /** A <picture> HTML element. It doesn't implement specific properties or methods. */
 interface HTMLPictureElement extends HTMLElement {
@@ -7440,7 +7440,7 @@ interface HTMLPictureElement extends HTMLElement {
 declare interface HTMLPictureElementConstructor {
     prototype: HTMLPictureElement;
     new(): HTMLPictureElement;
-};
+}
 
 /** Exposes specific properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating a block of preformatted text (<pre>). */
 interface HTMLPreElement extends HTMLElement {
@@ -7458,7 +7458,7 @@ interface HTMLPreElement extends HTMLElement {
 declare interface HTMLPreElementConstructor {
     prototype: HTMLPreElement;
     new(): HTMLPreElement;
-};
+}
 
 /** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <progress> elements. */
 interface HTMLProgressElement extends HTMLElement {
@@ -7478,7 +7478,7 @@ interface HTMLProgressElement extends HTMLElement {
 declare interface HTMLProgressElementConstructor {
     prototype: HTMLProgressElement;
     new(): HTMLProgressElement;
-};
+}
 
 /** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating quoting elements, like <blockquote> and <q>, but not the <cite> element. */
 interface HTMLQuoteElement extends HTMLElement {
@@ -7493,7 +7493,7 @@ interface HTMLQuoteElement extends HTMLElement {
 declare interface HTMLQuoteElementConstructor {
     prototype: HTMLQuoteElement;
     new(): HTMLQuoteElement;
-};
+}
 
 /** HTML <script> elements expose the HTMLScriptElement interface, which provides special properties and methods for manipulating the behavior and execution of <script> elements (beyond the inherited HTMLElement interface). */
 interface HTMLScriptElement extends HTMLElement {
@@ -7534,7 +7534,7 @@ interface HTMLScriptElement extends HTMLElement {
 declare interface HTMLScriptElementConstructor {
     prototype: HTMLScriptElement;
     new(): HTMLScriptElement;
-};
+}
 
 /** A <select> HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface. */
 interface HTMLSelectElement extends HTMLElement {
@@ -7609,7 +7609,7 @@ interface HTMLSelectElement extends HTMLElement {
 declare interface HTMLSelectElementConstructor {
     prototype: HTMLSelectElement;
     new(): HTMLSelectElement;
-};
+}
 
 interface HTMLSlotElement extends HTMLElement {
     name: string;
@@ -7625,7 +7625,7 @@ interface HTMLSlotElement extends HTMLElement {
 declare interface HTMLSlotElementConstructor {
     prototype: HTMLSlotElement;
     new(): HTMLSlotElement;
-};
+}
 
 /** Provides special properties (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating <source> elements. */
 interface HTMLSourceElement extends HTMLElement {
@@ -7648,7 +7648,7 @@ interface HTMLSourceElement extends HTMLElement {
 declare interface HTMLSourceElementConstructor {
     prototype: HTMLSourceElement;
     new(): HTMLSourceElement;
-};
+}
 
 /** A <span> element and derives from the HTMLElement interface, but without implementing any additional properties or methods. */
 interface HTMLSpanElement extends HTMLElement {
@@ -7661,7 +7661,7 @@ interface HTMLSpanElement extends HTMLElement {
 declare interface HTMLSpanElementConstructor {
     prototype: HTMLSpanElement;
     new(): HTMLSpanElement;
-};
+}
 
 /** A <style> element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle. */
 interface HTMLStyleElement extends HTMLElement, LinkStyle {
@@ -7681,7 +7681,7 @@ interface HTMLStyleElement extends HTMLElement, LinkStyle {
 declare interface HTMLStyleElementConstructor {
     prototype: HTMLStyleElement;
     new(): HTMLStyleElement;
-};
+}
 
 /** Special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating table caption elements. */
 interface HTMLTableCaptionElement extends HTMLElement {
@@ -7699,7 +7699,7 @@ interface HTMLTableCaptionElement extends HTMLElement {
 declare interface HTMLTableCaptionElementConstructor {
     prototype: HTMLTableCaptionElement;
     new(): HTMLTableCaptionElement;
-};
+}
 
 /** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document. */
 interface HTMLTableCellElement extends HTMLElement {
@@ -7757,7 +7757,7 @@ interface HTMLTableCellElement extends HTMLElement {
 declare interface HTMLTableCellElementConstructor {
     prototype: HTMLTableCellElement;
     new(): HTMLTableCellElement;
-};
+}
 
 /** Provides special properties (beyond the HTMLElement interface it also has available to it inheritance) for manipulating single or grouped table column elements. */
 interface HTMLTableColElement extends HTMLElement {
@@ -7788,7 +7788,7 @@ interface HTMLTableColElement extends HTMLElement {
 declare interface HTMLTableColElementConstructor {
     prototype: HTMLTableColElement;
     new(): HTMLTableColElement;
-};
+}
 
 /** @deprecated prefer HTMLTableCellElement */
 interface HTMLTableDataCellElement extends HTMLTableCellElement {
@@ -7885,7 +7885,7 @@ interface HTMLTableElement extends HTMLElement {
 declare interface HTMLTableElementConstructor {
     prototype: HTMLTableElement;
     new(): HTMLTableElement;
-};
+}
 
 /** @deprecated prefer HTMLTableCellElement */
 interface HTMLTableHeaderCellElement extends HTMLTableCellElement {
@@ -7935,7 +7935,7 @@ interface HTMLTableRowElement extends HTMLElement {
 declare interface HTMLTableRowElementConstructor {
     prototype: HTMLTableRowElement;
     new(): HTMLTableRowElement;
-};
+}
 
 /** Provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table. */
 interface HTMLTableSectionElement extends HTMLElement {
@@ -7971,7 +7971,7 @@ interface HTMLTableSectionElement extends HTMLElement {
 declare interface HTMLTableSectionElementConstructor {
     prototype: HTMLTableSectionElement;
     new(): HTMLTableSectionElement;
-};
+}
 
 /** Enables access to the contents of an HTML <template> element. */
 interface HTMLTemplateElement extends HTMLElement {
@@ -7986,7 +7986,7 @@ interface HTMLTemplateElement extends HTMLElement {
 declare interface HTMLTemplateElementConstructor {
     prototype: HTMLTemplateElement;
     new(): HTMLTemplateElement;
-};
+}
 
 /** Provides special properties and methods for manipulating the layout and presentation of <textarea> elements. */
 interface HTMLTextAreaElement extends HTMLElement {
@@ -8059,7 +8059,7 @@ interface HTMLTextAreaElement extends HTMLElement {
 declare interface HTMLTextAreaElementConstructor {
     prototype: HTMLTextAreaElement;
     new(): HTMLTextAreaElement;
-};
+}
 
 /** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <time> elements. */
 interface HTMLTimeElement extends HTMLElement {
@@ -8073,7 +8073,7 @@ interface HTMLTimeElement extends HTMLElement {
 declare interface HTMLTimeElementConstructor {
     prototype: HTMLTimeElement;
     new(): HTMLTimeElement;
-};
+}
 
 /** Contains the title for a document. This element inherits all of the properties and methods of the HTMLElement interface. */
 interface HTMLTitleElement extends HTMLElement {
@@ -8088,7 +8088,7 @@ interface HTMLTitleElement extends HTMLElement {
 declare interface HTMLTitleElementConstructor {
     prototype: HTMLTitleElement;
     new(): HTMLTitleElement;
-};
+}
 
 /** The HTMLTrackElement */
 interface HTMLTrackElement extends HTMLElement {
@@ -8117,7 +8117,7 @@ declare interface HTMLTrackElementConstructor {
     readonly LOADED: number;
     readonly LOADING: number;
     readonly NONE: number;
-};
+}
 
 /** Provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating unordered list elements. */
 interface HTMLUListElement extends HTMLElement {
@@ -8134,7 +8134,7 @@ interface HTMLUListElement extends HTMLElement {
 declare interface HTMLUListElementConstructor {
     prototype: HTMLUListElement;
     new(): HTMLUListElement;
-};
+}
 
 /** An invalid HTML element and derives from the HTMLElement interface, but without implementing any additional properties or methods. */
 interface HTMLUnknownElement extends HTMLElement {
@@ -8147,7 +8147,7 @@ interface HTMLUnknownElement extends HTMLElement {
 declare interface HTMLUnknownElementConstructor {
     prototype: HTMLUnknownElement;
     new(): HTMLUnknownElement;
-};
+}
 
 interface HTMLVideoElementEventMap extends HTMLMediaElementEventMap {
     "enterpictureinpicture": Event;
@@ -8182,7 +8182,7 @@ interface HTMLVideoElement extends HTMLMediaElement {
 declare interface HTMLVideoElementConstructor {
     prototype: HTMLVideoElement;
     new(): HTMLVideoElement;
-};
+}
 
 /** Events that fire when the fragment identifier of the URL has changed. */
 interface HashChangeEvent extends Event {
@@ -8195,7 +8195,7 @@ interface HashChangeEvent extends Event {
 declare interface HashChangeEventConstructor {
     prototype: HashChangeEvent;
     new(type: string, eventInitDict?: HashChangeEventInit): HashChangeEvent;
-};
+}
 
 /** This Fetch API interface allows you to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing. A Headers object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like append() (see Examples.) In all methods of this interface, header names are matched by case-insensitive byte sequence. */
 interface Headers {
@@ -8210,7 +8210,7 @@ interface Headers {
 declare interface HeadersConstructor {
     prototype: Headers;
     new(init?: HeadersInit): Headers;
-};
+}
 
 /** Allows manipulation of the browser session history, that is the pages visited in the tab or frame that the current page is loaded in. */
 interface History {
@@ -8227,7 +8227,7 @@ interface History {
 declare interface HistoryConstructor {
     prototype: History;
     new(): History;
-};
+}
 
 /** This IndexedDB API interface represents a cursor for traversing or iterating over multiple records in a database. */
 interface IDBCursor {
@@ -8265,7 +8265,7 @@ interface IDBCursor {
 declare interface IDBCursorConstructor {
     prototype: IDBCursor;
     new(): IDBCursor;
-};
+}
 
 /** This IndexedDB API interface represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property. */
 interface IDBCursorWithValue extends IDBCursor {
@@ -8276,7 +8276,7 @@ interface IDBCursorWithValue extends IDBCursor {
 declare interface IDBCursorWithValueConstructor {
     prototype: IDBCursorWithValue;
     new(): IDBCursorWithValue;
-};
+}
 
 interface IDBDatabaseEventMap {
     "abort": Event;
@@ -8322,7 +8322,7 @@ interface IDBDatabase extends EventTarget {
 declare interface IDBDatabaseConstructor {
     prototype: IDBDatabase;
     new(): IDBDatabase;
-};
+}
 
 /** In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our To-do Notifications app (view example live.) */
 interface IDBFactory {
@@ -8342,7 +8342,7 @@ interface IDBFactory {
 declare interface IDBFactoryConstructor {
     prototype: IDBFactory;
     new(): IDBFactory;
-};
+}
 
 /** IDBIndex interface of the IndexedDB API provides asynchronous access to an index in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data. */
 interface IDBIndex {
@@ -8400,7 +8400,7 @@ interface IDBIndex {
 declare interface IDBIndexConstructor {
     prototype: IDBIndex;
     new(): IDBIndex;
-};
+}
 
 /** A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is bounded; if it has no bounds, it is unbounded. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs: */
 interface IDBKeyRange {
@@ -8427,7 +8427,7 @@ declare interface IDBKeyRangeConstructor {
     only(value: any): IDBKeyRange;
     /** Returns a new IDBKeyRange with no lower bound and ending at key. If open is true, key is not included in the range. */
     upperBound(upper: any, open?: boolean): IDBKeyRange;
-};
+}
 
 /** This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our To-do Notifications app (view example live.) */
 interface IDBObjectStore {
@@ -8533,7 +8533,7 @@ interface IDBObjectStore {
 declare interface IDBObjectStoreConstructor {
     prototype: IDBObjectStore;
     new(): IDBObjectStore;
-};
+}
 
 interface IDBOpenDBRequestEventMap extends IDBRequestEventMap {
     "blocked": Event;
@@ -8553,7 +8553,7 @@ interface IDBOpenDBRequest extends IDBRequest<IDBDatabase> {
 declare interface IDBOpenDBRequestConstructor {
     prototype: IDBOpenDBRequest;
     new(): IDBOpenDBRequest;
-};
+}
 
 interface IDBRequestEventMap {
     "error": Event;
@@ -8583,7 +8583,7 @@ interface IDBRequest<T = any> extends EventTarget {
 declare interface IDBRequestConstructor {
     prototype: IDBRequest;
     new(): IDBRequest;
-};
+}
 
 interface IDBTransactionEventMap {
     "abort": Event;
@@ -8618,7 +8618,7 @@ interface IDBTransaction extends EventTarget {
 declare interface IDBTransactionConstructor {
     prototype: IDBTransaction;
     new(): IDBTransaction;
-};
+}
 
 /** This IndexedDB API interface indicates that the version of the database has changed, as the result of an IDBOpenDBRequest.onupgradeneeded event handler function. */
 interface IDBVersionChangeEvent extends Event {
@@ -8629,7 +8629,7 @@ interface IDBVersionChangeEvent extends Event {
 declare interface IDBVersionChangeEventConstructor {
     prototype: IDBVersionChangeEvent;
     new(type: string, eventInitDict?: IDBVersionChangeEventInit): IDBVersionChangeEvent;
-};
+}
 
 /** The IIRFilterNode interface of the Web Audio API is a AudioNode processor which implements a general infinite impulse response (IIR)  filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed. */
 interface IIRFilterNode extends AudioNode {
@@ -8639,7 +8639,7 @@ interface IIRFilterNode extends AudioNode {
 declare interface IIRFilterNodeConstructor {
     prototype: IIRFilterNode;
     new(context: BaseAudioContext, options: IIRFilterOptions): IIRFilterNode;
-};
+}
 
 interface IdleDeadline {
     readonly didTimeout: boolean;
@@ -8649,7 +8649,7 @@ interface IdleDeadline {
 declare interface IdleDeadlineConstructor {
     prototype: IdleDeadline;
     new(): IdleDeadline;
-};
+}
 
 interface ImageBitmap {
     /** Returns the intrinsic height of the image, in CSS pixels. */
@@ -8663,7 +8663,7 @@ interface ImageBitmap {
 declare interface ImageBitmapConstructor {
     prototype: ImageBitmap;
     new(): ImageBitmap;
-};
+}
 
 interface ImageBitmapRenderingContext {
     /** Returns the canvas element that the context is bound to. */
@@ -8675,7 +8675,7 @@ interface ImageBitmapRenderingContext {
 declare interface ImageBitmapRenderingContextConstructor {
     prototype: ImageBitmapRenderingContext;
     new(): ImageBitmapRenderingContext;
-};
+}
 
 /** The underlying pixel data of an area of a <canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData(). */
 interface ImageData {
@@ -8691,7 +8691,7 @@ declare interface ImageDataConstructor {
     prototype: ImageData;
     new(sw: number, sh: number, settings?: ImageDataSettings): ImageData;
     new(data: Uint8ClampedArray, sw: number, sh?: number, settings?: ImageDataSettings): ImageData;
-};
+}
 
 interface InnerHTML {
     innerHTML: string;
@@ -8703,7 +8703,7 @@ interface InputDeviceInfo extends MediaDeviceInfo {
 declare interface InputDeviceInfoConstructor {
     prototype: InputDeviceInfo;
     new(): InputDeviceInfo;
-};
+}
 
 interface InputEvent extends UIEvent {
     readonly data: string | null;
@@ -8716,7 +8716,7 @@ interface InputEvent extends UIEvent {
 declare interface InputEventConstructor {
     prototype: InputEvent;
     new(type: string, eventInitDict?: InputEventInit): InputEvent;
-};
+}
 
 /** provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport. */
 interface IntersectionObserver {
@@ -8732,7 +8732,7 @@ interface IntersectionObserver {
 declare interface IntersectionObserverConstructor {
     prototype: IntersectionObserver;
     new(callback: IntersectionObserverCallback, options?: IntersectionObserverInit): IntersectionObserver;
-};
+}
 
 /** This Intersection Observer API interface describes the intersection between the target element and its root container at a specific moment of transition. */
 interface IntersectionObserverEntry {
@@ -8748,7 +8748,7 @@ interface IntersectionObserverEntry {
 declare interface IntersectionObserverEntryConstructor {
     prototype: IntersectionObserverEntry;
     new(intersectionObserverEntryInit: IntersectionObserverEntryInit): IntersectionObserverEntry;
-};
+}
 
 interface KHR_parallel_shader_compile {
     readonly COMPLETION_STATUS_KHR: GLenum;
@@ -8785,7 +8785,7 @@ declare interface KeyboardEventConstructor {
     readonly DOM_KEY_LOCATION_NUMPAD: number;
     readonly DOM_KEY_LOCATION_RIGHT: number;
     readonly DOM_KEY_LOCATION_STANDARD: number;
-};
+}
 
 interface KeyframeEffect extends AnimationEffect {
     composite: CompositeOperation;
@@ -8800,7 +8800,7 @@ declare interface KeyframeEffectConstructor {
     prototype: KeyframeEffect;
     new(target: Element | null, keyframes: Keyframe[] | PropertyIndexedKeyframes | null, options?: number | KeyframeEffectOptions): KeyframeEffect;
     new(source: KeyframeEffect): KeyframeEffect;
-};
+}
 
 interface LinkStyle {
     readonly sheet: CSSStyleSheet | null;
@@ -8872,7 +8872,7 @@ interface Location {
 declare interface LocationConstructor {
     prototype: Location;
     new(): Location;
-};
+}
 
 interface MathMLElementEventMap extends ElementEventMap, DocumentAndElementEventHandlersEventMap, GlobalEventHandlersEventMap {
 }
@@ -8887,7 +8887,7 @@ interface MathMLElement extends Element, DocumentAndElementEventHandlers, Elemen
 declare interface MathMLElementConstructor {
     prototype: MathMLElement;
     new(): MathMLElement;
-};
+}
 
 interface MediaCapabilities {
     decodingInfo(configuration: MediaDecodingConfiguration): Promise<MediaCapabilitiesDecodingInfo>;
@@ -8897,7 +8897,7 @@ interface MediaCapabilities {
 declare interface MediaCapabilitiesConstructor {
     prototype: MediaCapabilities;
     new(): MediaCapabilities;
-};
+}
 
 /**
  * The MediaDevicesInfo interface contains information that describes a single media input or output device.
@@ -8914,7 +8914,7 @@ interface MediaDeviceInfo {
 declare interface MediaDeviceInfoConstructor {
     prototype: MediaDeviceInfo;
     new(): MediaDeviceInfo;
-};
+}
 
 interface MediaDevicesEventMap {
     "devicechange": Event;
@@ -8939,7 +8939,7 @@ interface MediaDevices extends EventTarget {
 declare interface MediaDevicesConstructor {
     prototype: MediaDevices;
     new(): MediaDevices;
-};
+}
 
 /** A MediaElementSourceNode has no inputs and exactly one output, and is created using the AudioContext.createMediaElementSource method. The amount of channels in the output equals the number of channels of the audio referenced by the HTMLMediaElement used in the creation of the node, or is 1 if the HTMLMediaElement has no audio. */
 interface MediaElementAudioSourceNode extends AudioNode {
@@ -8949,7 +8949,7 @@ interface MediaElementAudioSourceNode extends AudioNode {
 declare interface MediaElementAudioSourceNodeConstructor {
     prototype: MediaElementAudioSourceNode;
     new(context: AudioContext, options: MediaElementAudioSourceOptions): MediaElementAudioSourceNode;
-};
+}
 
 interface MediaEncryptedEvent extends Event {
     readonly initData: ArrayBuffer | null;
@@ -8959,7 +8959,7 @@ interface MediaEncryptedEvent extends Event {
 declare interface MediaEncryptedEventConstructor {
     prototype: MediaEncryptedEvent;
     new(type: string, eventInitDict?: MediaEncryptedEventInit): MediaEncryptedEvent;
-};
+}
 
 /** An error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as <audio> or <video>. */
 interface MediaError {
@@ -8978,7 +8978,7 @@ declare interface MediaErrorConstructor {
     readonly MEDIA_ERR_DECODE: number;
     readonly MEDIA_ERR_NETWORK: number;
     readonly MEDIA_ERR_SRC_NOT_SUPPORTED: number;
-};
+}
 
 /**
  * This EncryptedMediaExtensions API interface contains the content and related data when the content decryption module generates a message for the session.
@@ -8992,7 +8992,7 @@ interface MediaKeyMessageEvent extends Event {
 declare interface MediaKeyMessageEventConstructor {
     prototype: MediaKeyMessageEvent;
     new(type: string, eventInitDict: MediaKeyMessageEventInit): MediaKeyMessageEvent;
-};
+}
 
 interface MediaKeySessionEventMap {
     "keystatuseschange": Event;
@@ -9024,7 +9024,7 @@ interface MediaKeySession extends EventTarget {
 declare interface MediaKeySessionConstructor {
     prototype: MediaKeySession;
     new(): MediaKeySession;
-};
+}
 
 /**
  * This EncryptedMediaExtensions API interface is a read-only map of media key statuses by key IDs.
@@ -9040,7 +9040,7 @@ interface MediaKeyStatusMap {
 declare interface MediaKeyStatusMapConstructor {
     prototype: MediaKeyStatusMap;
     new(): MediaKeyStatusMap;
-};
+}
 
 /**
  * This EncryptedMediaExtensions API interface provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the Navigator.requestMediaKeySystemAccess method.
@@ -9055,7 +9055,7 @@ interface MediaKeySystemAccess {
 declare interface MediaKeySystemAccessConstructor {
     prototype: MediaKeySystemAccess;
     new(): MediaKeySystemAccess;
-};
+}
 
 /**
  * This EncryptedMediaExtensions API interface the represents a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
@@ -9069,7 +9069,7 @@ interface MediaKeys {
 declare interface MediaKeysConstructor {
     prototype: MediaKeys;
     new(): MediaKeys;
-};
+}
 
 interface MediaList {
     readonly length: number;
@@ -9084,7 +9084,7 @@ interface MediaList {
 declare interface MediaListConstructor {
     prototype: MediaList;
     new(): MediaList;
-};
+}
 
 interface MediaMetadata {
     album: string;
@@ -9096,7 +9096,7 @@ interface MediaMetadata {
 declare interface MediaMetadataConstructor {
     prototype: MediaMetadata;
     new(init?: MediaMetadataInit): MediaMetadata;
-};
+}
 
 interface MediaQueryListEventMap {
     "change": MediaQueryListEvent;
@@ -9120,7 +9120,7 @@ interface MediaQueryList extends EventTarget {
 declare interface MediaQueryListConstructor {
     prototype: MediaQueryList;
     new(): MediaQueryList;
-};
+}
 
 interface MediaQueryListEvent extends Event {
     readonly matches: boolean;
@@ -9130,7 +9130,7 @@ interface MediaQueryListEvent extends Event {
 declare interface MediaQueryListEventConstructor {
     prototype: MediaQueryListEvent;
     new(type: string, eventInitDict?: MediaQueryListEventInit): MediaQueryListEvent;
-};
+}
 
 interface MediaRecorderEventMap {
     "dataavailable": BlobEvent;
@@ -9168,7 +9168,7 @@ declare interface MediaRecorderConstructor {
     prototype: MediaRecorder;
     new(stream: MediaStream, options?: MediaRecorderOptions): MediaRecorder;
     isTypeSupported(type: string): boolean;
-};
+}
 
 interface MediaRecorderErrorEvent extends Event {
     readonly error: DOMException;
@@ -9177,7 +9177,7 @@ interface MediaRecorderErrorEvent extends Event {
 declare interface MediaRecorderErrorEventConstructor {
     prototype: MediaRecorderErrorEvent;
     new(type: string, eventInitDict: MediaRecorderErrorEventInit): MediaRecorderErrorEvent;
-};
+}
 
 interface MediaSession {
     metadata: MediaMetadata | null;
@@ -9189,7 +9189,7 @@ interface MediaSession {
 declare interface MediaSessionConstructor {
     prototype: MediaSession;
     new(): MediaSession;
-};
+}
 
 interface MediaSourceEventMap {
     "sourceclose": Event;
@@ -9221,7 +9221,7 @@ declare interface MediaSourceConstructor {
     prototype: MediaSource;
     new(): MediaSource;
     isTypeSupported(type: string): boolean;
-};
+}
 
 interface MediaStreamEventMap {
     "addtrack": MediaStreamTrackEvent;
@@ -9252,7 +9252,7 @@ declare interface MediaStreamConstructor {
     new(): MediaStream;
     new(stream: MediaStream): MediaStream;
     new(tracks: MediaStreamTrack[]): MediaStream;
-};
+}
 
 interface MediaStreamAudioDestinationNode extends AudioNode {
     readonly stream: MediaStream;
@@ -9261,7 +9261,7 @@ interface MediaStreamAudioDestinationNode extends AudioNode {
 declare interface MediaStreamAudioDestinationNodeConstructor {
     prototype: MediaStreamAudioDestinationNode;
     new(context: AudioContext, options?: AudioNodeOptions): MediaStreamAudioDestinationNode;
-};
+}
 
 /** A type of AudioNode which operates as an audio source whose media is received from a MediaStream obtained using the WebRTC or Media Capture and Streams APIs. */
 interface MediaStreamAudioSourceNode extends AudioNode {
@@ -9271,7 +9271,7 @@ interface MediaStreamAudioSourceNode extends AudioNode {
 declare interface MediaStreamAudioSourceNodeConstructor {
     prototype: MediaStreamAudioSourceNode;
     new(context: AudioContext, options: MediaStreamAudioSourceOptions): MediaStreamAudioSourceNode;
-};
+}
 
 interface MediaStreamTrackEventMap {
     "ended": Event;
@@ -9306,7 +9306,7 @@ interface MediaStreamTrack extends EventTarget {
 declare interface MediaStreamTrackConstructor {
     prototype: MediaStreamTrack;
     new(): MediaStreamTrack;
-};
+}
 
 /** Events which indicate that a MediaStream has had tracks added to or removed from the stream through calls to Media Stream API methods. These events are sent to the stream when these changes occur. */
 interface MediaStreamTrackEvent extends Event {
@@ -9316,7 +9316,7 @@ interface MediaStreamTrackEvent extends Event {
 declare interface MediaStreamTrackEventConstructor {
     prototype: MediaStreamTrackEvent;
     new(type: string, eventInitDict: MediaStreamTrackEventInit): MediaStreamTrackEvent;
-};
+}
 
 /** This Channel Messaging API interface allows us to create a new message channel and send data through it via its two MessagePort properties. */
 interface MessageChannel {
@@ -9329,7 +9329,7 @@ interface MessageChannel {
 declare interface MessageChannelConstructor {
     prototype: MessageChannel;
     new(): MessageChannel;
-};
+}
 
 /** A message received by a target object. */
 interface MessageEvent<T = any> extends Event {
@@ -9350,7 +9350,7 @@ interface MessageEvent<T = any> extends Event {
 declare interface MessageEventConstructor {
     prototype: MessageEvent;
     new <T>(type: string, eventInitDict?: MessageEventInit<T>): MessageEvent<T>;
-};
+}
 
 interface MessagePortEventMap {
     "message": MessageEvent;
@@ -9381,7 +9381,7 @@ interface MessagePort extends EventTarget {
 declare interface MessagePortConstructor {
     prototype: MessagePort;
     new(): MessagePort;
-};
+}
 
 /**
  * Provides contains information about a MIME type associated with a particular plugin. NavigatorPlugins.mimeTypes returns an array of this object.
@@ -9414,7 +9414,7 @@ interface MimeType {
 declare interface MimeTypeConstructor {
     prototype: MimeType;
     new(): MimeType;
-};
+}
 
 /**
  * Returns an array of MimeType instances, each of which contains information about a supported browser plugins. This object is returned by NavigatorPlugins.mimeTypes.
@@ -9434,7 +9434,7 @@ interface MimeTypeArray {
 declare interface MimeTypeArrayConstructor {
     prototype: MimeTypeArray;
     new(): MimeTypeArray;
-};
+}
 
 /** Events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include click, dblclick, mouseup, mousedown. */
 interface MouseEvent extends UIEvent {
@@ -9465,7 +9465,7 @@ interface MouseEvent extends UIEvent {
 declare interface MouseEventConstructor {
     prototype: MouseEvent;
     new(type: string, eventInitDict?: MouseEventInit): MouseEvent;
-};
+}
 
 /**
  * Provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
@@ -9496,7 +9496,7 @@ declare interface MutationEventConstructor {
     readonly ADDITION: number;
     readonly MODIFICATION: number;
     readonly REMOVAL: number;
-};
+}
 
 /** Provides the ability to watch for changes being made to the DOM tree. It is designed as a replacement for the older Mutation Events feature which was part of the DOM3 Events specification. */
 interface MutationObserver {
@@ -9515,7 +9515,7 @@ interface MutationObserver {
 declare interface MutationObserverConstructor {
     prototype: MutationObserver;
     new(callback: MutationCallback): MutationObserver;
-};
+}
 
 /** A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback. */
 interface MutationRecord {
@@ -9542,7 +9542,7 @@ interface MutationRecord {
 declare interface MutationRecordConstructor {
     prototype: MutationRecord;
     new(): MutationRecord;
-};
+}
 
 /** A collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array. */
 interface NamedNodeMap {
@@ -9560,7 +9560,7 @@ interface NamedNodeMap {
 declare interface NamedNodeMapConstructor {
     prototype: NamedNodeMap;
     new(): NamedNodeMap;
-};
+}
 
 /** The state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities. */
 interface Navigator extends NavigatorAutomationInformation, NavigatorConcurrentHardware, NavigatorContentUtils, NavigatorCookies, NavigatorID, NavigatorLanguage, NavigatorNetworkInformation, NavigatorOnLine, NavigatorPlugins, NavigatorStorage {
@@ -9592,7 +9592,7 @@ interface Navigator extends NavigatorAutomationInformation, NavigatorConcurrentH
 declare interface NavigatorConstructor {
     prototype: Navigator;
     new(): Navigator;
-};
+}
 
 interface NavigatorAutomationInformation {
     readonly webdriver: boolean;
@@ -9664,7 +9664,7 @@ interface NetworkInformation extends EventTarget {
 declare interface NetworkInformationConstructor {
     prototype: NetworkInformation;
     new(): NetworkInformation;
-};
+}
 
 /** Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way. */
 interface Node extends EventTarget {
@@ -9783,7 +9783,7 @@ declare interface NodeConstructor {
     readonly PROCESSING_INSTRUCTION_NODE: number;
     /** node is a Text node. */
     readonly TEXT_NODE: number;
-};
+}
 
 /** An iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order. */
 interface NodeIterator {
@@ -9801,7 +9801,7 @@ interface NodeIterator {
 declare interface NodeIteratorConstructor {
     prototype: NodeIterator;
     new(): NodeIterator;
-};
+}
 
 /** NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll(). */
 interface NodeList {
@@ -9821,7 +9821,7 @@ interface NodeList {
 declare interface NodeListConstructor {
     prototype: NodeList;
     new(): NodeList;
-};
+}
 
 interface NodeListOf<TNode extends Node> extends NodeList {
     item(index: number): TNode;
@@ -9878,7 +9878,7 @@ declare interface NotificationConstructor {
     new(title: string, options?: NotificationOptions): Notification;
     readonly permission: NotificationPermission;
     requestPermission(deprecatedCallback?: NotificationPermissionCallback): Promise<NotificationPermission>;
-};
+}
 
 /** The OES_element_index_uint extension is part of the WebGL API and adds support for gl.UNSIGNED_INT types to WebGLRenderingContext.drawElements(). */
 interface OES_element_index_uint {
@@ -9933,7 +9933,7 @@ interface OfflineAudioCompletionEvent extends Event {
 declare interface OfflineAudioCompletionEventConstructor {
     prototype: OfflineAudioCompletionEvent;
     new(type: string, eventInitDict: OfflineAudioCompletionEventInit): OfflineAudioCompletionEvent;
-};
+}
 
 interface OfflineAudioContextEventMap extends BaseAudioContextEventMap {
     "complete": OfflineAudioCompletionEvent;
@@ -9956,7 +9956,7 @@ declare interface OfflineAudioContextConstructor {
     prototype: OfflineAudioContext;
     new(contextOptions: OfflineAudioContextOptions): OfflineAudioContext;
     new(numberOfChannels: number, length: number, sampleRate: number): OfflineAudioContext;
-};
+}
 
 /** The OscillatorNode interface represents a periodic waveform, such as a sine wave. It is an AudioScheduledSourceNode audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone. */
 interface OscillatorNode extends AudioScheduledSourceNode {
@@ -9973,7 +9973,7 @@ interface OscillatorNode extends AudioScheduledSourceNode {
 declare interface OscillatorNodeConstructor {
     prototype: OscillatorNode;
     new(context: BaseAudioContext, options?: OscillatorOptions): OscillatorNode;
-};
+}
 
 interface OverconstrainedError extends Error {
     readonly constraint: string;
@@ -9982,7 +9982,7 @@ interface OverconstrainedError extends Error {
 declare interface OverconstrainedErrorConstructor {
     prototype: OverconstrainedError;
     new(constraint: string, message?: string): OverconstrainedError;
-};
+}
 
 /** The PageTransitionEvent is fired when a document is being loaded or unloaded. */
 interface PageTransitionEvent extends Event {
@@ -10004,7 +10004,7 @@ interface PageTransitionEvent extends Event {
 declare interface PageTransitionEventConstructor {
     prototype: PageTransitionEvent;
     new(type: string, eventInitDict?: PageTransitionEventInit): PageTransitionEvent;
-};
+}
 
 /** A PannerNode always has exactly one input and one output: the input can be mono or stereo but the output is always stereo (2 channels); you can't have panning effects without at least two audio channels! */
 interface PannerNode extends AudioNode {
@@ -10031,7 +10031,7 @@ interface PannerNode extends AudioNode {
 declare interface PannerNodeConstructor {
     prototype: PannerNode;
     new(context: BaseAudioContext, options?: PannerOptions): PannerNode;
-};
+}
 
 interface ParentNode extends Node {
     readonly childElementCount: number;
@@ -10078,7 +10078,7 @@ interface Path2D extends CanvasPath {
 declare interface Path2DConstructor {
     prototype: Path2D;
     new(path?: Path2D | string): Path2D;
-};
+}
 
 /** Available only in secure contexts. */
 interface PaymentMethodChangeEvent extends PaymentRequestUpdateEvent {
@@ -10089,7 +10089,7 @@ interface PaymentMethodChangeEvent extends PaymentRequestUpdateEvent {
 declare interface PaymentMethodChangeEventConstructor {
     prototype: PaymentMethodChangeEvent;
     new(type: string, eventInitDict?: PaymentMethodChangeEventInit): PaymentMethodChangeEvent;
-};
+}
 
 interface PaymentRequestEventMap {
     "paymentmethodchange": Event;
@@ -10114,7 +10114,7 @@ interface PaymentRequest extends EventTarget {
 declare interface PaymentRequestConstructor {
     prototype: PaymentRequest;
     new(methodData: PaymentMethodData[], details: PaymentDetailsInit): PaymentRequest;
-};
+}
 
 /**
  * This Payment Request API interface enables a web page to update the details of a PaymentRequest in response to a user action.
@@ -10127,7 +10127,7 @@ interface PaymentRequestUpdateEvent extends Event {
 declare interface PaymentRequestUpdateEventConstructor {
     prototype: PaymentRequestUpdateEvent;
     new(type: string, eventInitDict?: PaymentRequestUpdateEventInit): PaymentRequestUpdateEvent;
-};
+}
 
 /**
  * This Payment Request API interface is returned after a user selects a payment method and approves a payment request.
@@ -10145,7 +10145,7 @@ interface PaymentResponse extends EventTarget {
 declare interface PaymentResponseConstructor {
     prototype: PaymentResponse;
     new(): PaymentResponse;
-};
+}
 
 interface PerformanceEventMap {
     "resourcetimingbufferfull": Event;
@@ -10179,7 +10179,7 @@ interface Performance extends EventTarget {
 declare interface PerformanceConstructor {
     prototype: Performance;
     new(): Performance;
-};
+}
 
 /** Encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image). */
 interface PerformanceEntry {
@@ -10193,7 +10193,7 @@ interface PerformanceEntry {
 declare interface PerformanceEntryConstructor {
     prototype: PerformanceEntry;
     new(): PerformanceEntry;
-};
+}
 
 interface PerformanceEventTiming extends PerformanceEntry {
     readonly cancelable: boolean;
@@ -10205,7 +10205,7 @@ interface PerformanceEventTiming extends PerformanceEntry {
 declare interface PerformanceEventTimingConstructor {
     prototype: PerformanceEventTiming;
     new(): PerformanceEventTiming;
-};
+}
 
 /** PerformanceMark is an abstract interface for PerformanceEntry objects with an entryType of "mark". Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline. */
 interface PerformanceMark extends PerformanceEntry {
@@ -10215,7 +10215,7 @@ interface PerformanceMark extends PerformanceEntry {
 declare interface PerformanceMarkConstructor {
     prototype: PerformanceMark;
     new(markName: string, markOptions?: PerformanceMarkOptions): PerformanceMark;
-};
+}
 
 /** PerformanceMeasure is an abstract interface for PerformanceEntry objects with an entryType of "measure". Entries of this type are created by calling performance.measure() to add a named DOMHighResTimeStamp (the measure) between two marks to the browser's performance timeline. */
 interface PerformanceMeasure extends PerformanceEntry {
@@ -10225,7 +10225,7 @@ interface PerformanceMeasure extends PerformanceEntry {
 declare interface PerformanceMeasureConstructor {
     prototype: PerformanceMeasure;
     new(): PerformanceMeasure;
-};
+}
 
 /**
  * The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done.
@@ -10252,7 +10252,7 @@ declare interface PerformanceNavigationConstructor {
     readonly TYPE_NAVIGATE: number;
     readonly TYPE_RELOAD: number;
     readonly TYPE_RESERVED: number;
-};
+}
 
 /** Provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document. */
 interface PerformanceNavigationTiming extends PerformanceResourceTiming {
@@ -10272,7 +10272,7 @@ interface PerformanceNavigationTiming extends PerformanceResourceTiming {
 declare interface PerformanceNavigationTimingConstructor {
     prototype: PerformanceNavigationTiming;
     new(): PerformanceNavigationTiming;
-};
+}
 
 interface PerformanceObserver {
     disconnect(): void;
@@ -10284,7 +10284,7 @@ declare interface PerformanceObserverConstructor {
     prototype: PerformanceObserver;
     new(callback: PerformanceObserverCallback): PerformanceObserver;
     readonly supportedEntryTypes: ReadonlyArray<string>;
-};
+}
 
 interface PerformanceObserverEntryList {
     getEntries(): PerformanceEntryList;
@@ -10295,7 +10295,7 @@ interface PerformanceObserverEntryList {
 declare interface PerformanceObserverEntryListConstructor {
     prototype: PerformanceObserverEntryList;
     new(): PerformanceObserverEntryList;
-};
+}
 
 interface PerformancePaintTiming extends PerformanceEntry {
 }
@@ -10303,7 +10303,7 @@ interface PerformancePaintTiming extends PerformanceEntry {
 declare interface PerformancePaintTimingConstructor {
     prototype: PerformancePaintTiming;
     new(): PerformancePaintTiming;
-};
+}
 
 /** Enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an XMLHttpRequest, <SVG>, image, or script. */
 interface PerformanceResourceTiming extends PerformanceEntry {
@@ -10331,7 +10331,7 @@ interface PerformanceResourceTiming extends PerformanceEntry {
 declare interface PerformanceResourceTimingConstructor {
     prototype: PerformanceResourceTiming;
     new(): PerformanceResourceTiming;
-};
+}
 
 interface PerformanceServerTiming {
     readonly description: string;
@@ -10343,7 +10343,7 @@ interface PerformanceServerTiming {
 declare interface PerformanceServerTimingConstructor {
     prototype: PerformanceServerTiming;
     new(): PerformanceServerTiming;
-};
+}
 
 /**
  * A legacy interface kept for backwards compatibility and contains properties that offer performance timing information for various events which occur during the loading and use of the current page. You get a PerformanceTiming object describing your page using the window.performance.timing property.
@@ -10400,7 +10400,7 @@ interface PerformanceTiming {
 declare interface PerformanceTimingConstructor {
     prototype: PerformanceTiming;
     new(): PerformanceTiming;
-};
+}
 
 /** PeriodicWave has no inputs or outputs; it is used to define custom oscillators when calling OscillatorNode.setPeriodicWave(). The PeriodicWave itself is created/returned by AudioContext.createPeriodicWave(). */
 interface PeriodicWave {
@@ -10409,7 +10409,7 @@ interface PeriodicWave {
 declare interface PeriodicWaveConstructor {
     prototype: PeriodicWave;
     new(context: BaseAudioContext, options?: PeriodicWaveOptions): PeriodicWave;
-};
+}
 
 interface PermissionStatusEventMap {
     "change": Event;
@@ -10427,7 +10427,7 @@ interface PermissionStatus extends EventTarget {
 declare interface PermissionStatusConstructor {
     prototype: PermissionStatus;
     new(): PermissionStatus;
-};
+}
 
 interface Permissions {
     query(permissionDesc: PermissionDescriptor): Promise<PermissionStatus>;
@@ -10436,7 +10436,7 @@ interface Permissions {
 declare interface PermissionsConstructor {
     prototype: Permissions;
     new(): Permissions;
-};
+}
 
 interface PictureInPictureWindowEventMap {
     "resize": Event;
@@ -10455,7 +10455,7 @@ interface PictureInPictureWindow extends EventTarget {
 declare interface PictureInPictureWindowConstructor {
     prototype: PictureInPictureWindow;
     new(): PictureInPictureWindow;
-};
+}
 
 /**
  * Provides information about a browser plugin.
@@ -10496,7 +10496,7 @@ interface Plugin {
 declare interface PluginConstructor {
     prototype: Plugin;
     new(): Plugin;
-};
+}
 
 /**
  * Used to store a list of Plugin objects describing the available plugins; it's returned by the window.navigator.plugins property. The PluginArray is not a JavaScript array, but has the length property and supports accessing individual items using bracket notation (plugins[2]), as well as via item(index) and namedItem("name") methods.
@@ -10518,7 +10518,7 @@ interface PluginArray {
 declare interface PluginArrayConstructor {
     prototype: PluginArray;
     new(): PluginArray;
-};
+}
 
 /** The state of a DOM event produced by a pointer such as the geometry of the contact point, the device type that generated the event, the amount of pressure that was applied on the contact surface, etc. */
 interface PointerEvent extends MouseEvent {
@@ -10540,7 +10540,7 @@ interface PointerEvent extends MouseEvent {
 declare interface PointerEventConstructor {
     prototype: PointerEvent;
     new(type: string, eventInitDict?: PointerEventInit): PointerEvent;
-};
+}
 
 /** PopStateEvent is an event handler for the popstate event on the window. */
 interface PopStateEvent extends Event {
@@ -10551,7 +10551,7 @@ interface PopStateEvent extends Event {
 declare interface PopStateEventConstructor {
     prototype: PopStateEvent;
     new(type: string, eventInitDict?: PopStateEventInit): PopStateEvent;
-};
+}
 
 /** A processing instruction embeds application-specific instructions in XML which can be ignored by other applications that don't recognize them. */
 interface ProcessingInstruction extends CharacterData, LinkStyle {
@@ -10562,7 +10562,7 @@ interface ProcessingInstruction extends CharacterData, LinkStyle {
 declare interface ProcessingInstructionConstructor {
     prototype: ProcessingInstruction;
     new(): ProcessingInstruction;
-};
+}
 
 /** Events measuring progress of an underlying process, like an HTTP request (for an XMLHttpRequest, or the loading of the underlying resource of an <img>, <audio>, <video>, <style> or <link>). */
 interface ProgressEvent<T extends EventTarget = EventTarget> extends Event {
@@ -10575,7 +10575,7 @@ interface ProgressEvent<T extends EventTarget = EventTarget> extends Event {
 declare interface ProgressEventConstructor {
     prototype: ProgressEvent;
     new(type: string, eventInitDict?: ProgressEventInit): ProgressEvent;
-};
+}
 
 interface PromiseRejectionEvent extends Event {
     readonly promise: Promise<any>;
@@ -10585,7 +10585,7 @@ interface PromiseRejectionEvent extends Event {
 declare interface PromiseRejectionEventConstructor {
     prototype: PromiseRejectionEvent;
     new(type: string, eventInitDict: PromiseRejectionEventInit): PromiseRejectionEvent;
-};
+}
 
 /** Available only in secure contexts. */
 interface PublicKeyCredential extends Credential {
@@ -10598,7 +10598,7 @@ declare interface PublicKeyCredentialConstructor {
     prototype: PublicKeyCredential;
     new(): PublicKeyCredential;
     isUserVerifyingPlatformAuthenticatorAvailable(): Promise<boolean>;
-};
+}
 
 /**
  * This Push API interface provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
@@ -10614,7 +10614,7 @@ declare interface PushManagerConstructor {
     prototype: PushManager;
     new(): PushManager;
     readonly supportedContentEncodings: ReadonlyArray<string>;
-};
+}
 
 /**
  * This Push API interface provides a subcription's URL endpoint and allows unsubscription from a push service.
@@ -10631,7 +10631,7 @@ interface PushSubscription {
 declare interface PushSubscriptionConstructor {
     prototype: PushSubscription;
     new(): PushSubscription;
-};
+}
 
 /** Available only in secure contexts. */
 interface PushSubscriptionOptions {
@@ -10641,7 +10641,7 @@ interface PushSubscriptionOptions {
 declare interface PushSubscriptionOptionsConstructor {
     prototype: PushSubscriptionOptions;
     new(): PushSubscriptionOptions;
-};
+}
 
 interface RTCCertificate {
     readonly expires: EpochTimeStamp;
@@ -10651,7 +10651,7 @@ interface RTCCertificate {
 declare interface RTCCertificateConstructor {
     prototype: RTCCertificate;
     new(): RTCCertificate;
-};
+}
 
 interface RTCDTMFSenderEventMap {
     "tonechange": RTCDTMFToneChangeEvent;
@@ -10671,7 +10671,7 @@ interface RTCDTMFSender extends EventTarget {
 declare interface RTCDTMFSenderConstructor {
     prototype: RTCDTMFSender;
     new(): RTCDTMFSender;
-};
+}
 
 /** Events sent to indicate that DTMF tones have started or finished playing. This interface is used by the tonechange event. */
 interface RTCDTMFToneChangeEvent extends Event {
@@ -10681,7 +10681,7 @@ interface RTCDTMFToneChangeEvent extends Event {
 declare interface RTCDTMFToneChangeEventConstructor {
     prototype: RTCDTMFToneChangeEvent;
     new(type: string, eventInitDict?: RTCDTMFToneChangeEventInit): RTCDTMFToneChangeEvent;
-};
+}
 
 interface RTCDataChannelEventMap {
     "bufferedamountlow": Event;
@@ -10722,7 +10722,7 @@ interface RTCDataChannel extends EventTarget {
 declare interface RTCDataChannelConstructor {
     prototype: RTCDataChannel;
     new(): RTCDataChannel;
-};
+}
 
 interface RTCDataChannelEvent extends Event {
     readonly channel: RTCDataChannel;
@@ -10731,7 +10731,7 @@ interface RTCDataChannelEvent extends Event {
 declare interface RTCDataChannelEventConstructor {
     prototype: RTCDataChannelEvent;
     new(type: string, eventInitDict: RTCDataChannelEventInit): RTCDataChannelEvent;
-};
+}
 
 interface RTCDtlsTransportEventMap {
     "statechange": Event;
@@ -10749,7 +10749,7 @@ interface RTCDtlsTransport extends EventTarget {
 declare interface RTCDtlsTransportConstructor {
     prototype: RTCDtlsTransport;
     new(): RTCDtlsTransport;
-};
+}
 
 /** The RTCIceCandidate interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection. */
 interface RTCIceCandidate {
@@ -10773,7 +10773,7 @@ interface RTCIceCandidate {
 declare interface RTCIceCandidateConstructor {
     prototype: RTCIceCandidate;
     new(candidateInitDict?: RTCIceCandidateInit): RTCIceCandidate;
-};
+}
 
 /** Provides access to information about the ICE transport layer over which the data is being sent and received. */
 interface RTCIceTransport extends EventTarget {
@@ -10784,7 +10784,7 @@ interface RTCIceTransport extends EventTarget {
 declare interface RTCIceTransportConstructor {
     prototype: RTCIceTransport;
     new(): RTCIceTransport;
-};
+}
 
 interface RTCPeerConnectionEventMap {
     "connectionstatechange": Event;
@@ -10857,7 +10857,7 @@ declare interface RTCPeerConnectionConstructor {
     prototype: RTCPeerConnection;
     new(configuration?: RTCConfiguration): RTCPeerConnection;
     generateCertificate(keygenAlgorithm: AlgorithmIdentifier): Promise<RTCCertificate>;
-};
+}
 
 interface RTCPeerConnectionIceErrorEvent extends Event {
     readonly address: string | null;
@@ -10870,7 +10870,7 @@ interface RTCPeerConnectionIceErrorEvent extends Event {
 declare interface RTCPeerConnectionIceErrorEventConstructor {
     prototype: RTCPeerConnectionIceErrorEvent;
     new(type: string, eventInitDict: RTCPeerConnectionIceErrorEventInit): RTCPeerConnectionIceErrorEvent;
-};
+}
 
 /** Events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection. Only one event is of this type: icecandidate. */
 interface RTCPeerConnectionIceEvent extends Event {
@@ -10880,7 +10880,7 @@ interface RTCPeerConnectionIceEvent extends Event {
 declare interface RTCPeerConnectionIceEventConstructor {
     prototype: RTCPeerConnectionIceEvent;
     new(type: string, eventInitDict?: RTCPeerConnectionIceEventInit): RTCPeerConnectionIceEvent;
-};
+}
 
 /** This WebRTC API interface manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection. */
 interface RTCRtpReceiver {
@@ -10896,7 +10896,7 @@ declare interface RTCRtpReceiverConstructor {
     prototype: RTCRtpReceiver;
     new(): RTCRtpReceiver;
     getCapabilities(kind: string): RTCRtpCapabilities | null;
-};
+}
 
 /** Provides the ability to control and obtain details about how a particular MediaStreamTrack is encoded and sent to a remote peer. */
 interface RTCRtpSender {
@@ -10914,7 +10914,7 @@ declare interface RTCRtpSenderConstructor {
     prototype: RTCRtpSender;
     new(): RTCRtpSender;
     getCapabilities(kind: string): RTCRtpCapabilities | null;
-};
+}
 
 interface RTCRtpTransceiver {
     readonly currentDirection: RTCRtpTransceiverDirection | null;
@@ -10928,7 +10928,7 @@ interface RTCRtpTransceiver {
 declare interface RTCRtpTransceiverConstructor {
     prototype: RTCRtpTransceiver;
     new(): RTCRtpTransceiver;
-};
+}
 
 /** One end of a connection—or potential connection—and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session. */
 interface RTCSessionDescription {
@@ -10940,7 +10940,7 @@ interface RTCSessionDescription {
 declare interface RTCSessionDescriptionConstructor {
     prototype: RTCSessionDescription;
     new(descriptionInitDict: RTCSessionDescriptionInit): RTCSessionDescription;
-};
+}
 
 interface RTCStatsReport {
     forEach(callbackfn: (value: any, key: string, parent: RTCStatsReport) => void, thisArg?: any): void;
@@ -10949,7 +10949,7 @@ interface RTCStatsReport {
 declare interface RTCStatsReportConstructor {
     prototype: RTCStatsReport;
     new(): RTCStatsReport;
-};
+}
 
 interface RTCTrackEvent extends Event {
     readonly receiver: RTCRtpReceiver;
@@ -10961,7 +10961,7 @@ interface RTCTrackEvent extends Event {
 declare interface RTCTrackEventConstructor {
     prototype: RTCTrackEvent;
     new(type: string, eventInitDict: RTCTrackEventInit): RTCTrackEvent;
-};
+}
 
 interface RadioNodeList extends NodeList {
     value: string;
@@ -10970,7 +10970,7 @@ interface RadioNodeList extends NodeList {
 declare interface RadioNodeListConstructor {
     prototype: RadioNodeList;
     new(): RadioNodeList;
-};
+}
 
 /** A fragment of a document that can contain nodes and parts of text nodes. */
 interface Range extends AbstractRange {
@@ -11016,7 +11016,7 @@ declare interface RangeConstructor {
     readonly START_TO_END: number;
     readonly START_TO_START: number;
     toString(): string;
-};
+}
 
 /** This Streams API interface represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object. */
 interface ReadableStream<R = any> {
@@ -11031,7 +11031,7 @@ interface ReadableStream<R = any> {
 declare interface ReadableStreamConstructor {
     prototype: ReadableStream;
     new <R = any>(underlyingSource?: UnderlyingSource<R>, strategy?: QueuingStrategy<R>): ReadableStream<R>;
-};
+}
 
 interface ReadableStreamDefaultController<R = any> {
     readonly desiredSize: number | null;
@@ -11043,7 +11043,7 @@ interface ReadableStreamDefaultController<R = any> {
 declare interface ReadableStreamDefaultControllerConstructor {
     prototype: ReadableStreamDefaultController;
     new(): ReadableStreamDefaultController;
-};
+}
 
 interface ReadableStreamDefaultReader<R = any> extends ReadableStreamGenericReader {
     read(): Promise<ReadableStreamDefaultReadResult<R>>;
@@ -11053,7 +11053,7 @@ interface ReadableStreamDefaultReader<R = any> extends ReadableStreamGenericRead
 declare interface ReadableStreamDefaultReaderConstructor {
     prototype: ReadableStreamDefaultReader;
     new <R = any>(stream: ReadableStream<R>): ReadableStreamDefaultReader<R>;
-};
+}
 
 interface ReadableStreamGenericReader {
     readonly closed: Promise<undefined>;
@@ -11083,7 +11083,7 @@ interface RemotePlayback extends EventTarget {
 declare interface RemotePlaybackConstructor {
     prototype: RemotePlayback;
     new(): RemotePlayback;
-};
+}
 
 /** This Fetch API interface represents a resource request. */
 interface Request extends Body {
@@ -11119,7 +11119,7 @@ interface Request extends Body {
 declare interface RequestConstructor {
     prototype: Request;
     new(input: RequestInfo, init?: RequestInit): Request;
-};
+}
 
 interface ResizeObserver {
     disconnect(): void;
@@ -11130,7 +11130,7 @@ interface ResizeObserver {
 declare interface ResizeObserverConstructor {
     prototype: ResizeObserver;
     new(callback: ResizeObserverCallback): ResizeObserver;
-};
+}
 
 interface ResizeObserverEntry {
     readonly borderBoxSize: ReadonlyArray<ResizeObserverSize>;
@@ -11142,7 +11142,7 @@ interface ResizeObserverEntry {
 declare interface ResizeObserverEntryConstructor {
     prototype: ResizeObserverEntry;
     new(): ResizeObserverEntry;
-};
+}
 
 interface ResizeObserverSize {
     readonly blockSize: number;
@@ -11152,7 +11152,7 @@ interface ResizeObserverSize {
 declare interface ResizeObserverSizeConstructor {
     prototype: ResizeObserverSize;
     new(): ResizeObserverSize;
-};
+}
 
 /** This Fetch API interface represents the response to a request. */
 interface Response extends Body {
@@ -11171,7 +11171,7 @@ declare interface ResponseConstructor {
     new(body?: BodyInit | null, init?: ResponseInit): Response;
     error(): Response;
     redirect(url: string | URL, status?: number): Response;
-};
+}
 
 /** Provides access to the properties of <a> element, as well as methods to manipulate them. */
 interface SVGAElement extends SVGGraphicsElement, SVGURIReference {
@@ -11187,7 +11187,7 @@ interface SVGAElement extends SVGGraphicsElement, SVGURIReference {
 declare interface SVGAElementConstructor {
     prototype: SVGAElement;
     new(): SVGAElement;
-};
+}
 
 /** Used to represent a value that can be an <angle> or <number> value. An SVGAngle reflected through the animVal attribute is always read only. */
 interface SVGAngle {
@@ -11212,7 +11212,7 @@ declare interface SVGAngleConstructor {
     readonly SVG_ANGLETYPE_RAD: number;
     readonly SVG_ANGLETYPE_UNKNOWN: number;
     readonly SVG_ANGLETYPE_UNSPECIFIED: number;
-};
+}
 
 interface SVGAnimateElement extends SVGAnimationElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAnimateElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -11224,7 +11224,7 @@ interface SVGAnimateElement extends SVGAnimationElement {
 declare interface SVGAnimateElementConstructor {
     prototype: SVGAnimateElement;
     new(): SVGAnimateElement;
-};
+}
 
 interface SVGAnimateMotionElement extends SVGAnimationElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAnimateMotionElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -11236,7 +11236,7 @@ interface SVGAnimateMotionElement extends SVGAnimationElement {
 declare interface SVGAnimateMotionElementConstructor {
     prototype: SVGAnimateMotionElement;
     new(): SVGAnimateMotionElement;
-};
+}
 
 interface SVGAnimateTransformElement extends SVGAnimationElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAnimateTransformElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -11248,7 +11248,7 @@ interface SVGAnimateTransformElement extends SVGAnimationElement {
 declare interface SVGAnimateTransformElementConstructor {
     prototype: SVGAnimateTransformElement;
     new(): SVGAnimateTransformElement;
-};
+}
 
 /** Used for attributes of basic type <angle> which can be animated. */
 interface SVGAnimatedAngle {
@@ -11259,7 +11259,7 @@ interface SVGAnimatedAngle {
 declare interface SVGAnimatedAngleConstructor {
     prototype: SVGAnimatedAngle;
     new(): SVGAnimatedAngle;
-};
+}
 
 /** Used for attributes of type boolean which can be animated. */
 interface SVGAnimatedBoolean {
@@ -11270,7 +11270,7 @@ interface SVGAnimatedBoolean {
 declare interface SVGAnimatedBooleanConstructor {
     prototype: SVGAnimatedBoolean;
     new(): SVGAnimatedBoolean;
-};
+}
 
 /** Used for attributes whose value must be a constant from a particular enumeration and which can be animated. */
 interface SVGAnimatedEnumeration {
@@ -11281,7 +11281,7 @@ interface SVGAnimatedEnumeration {
 declare interface SVGAnimatedEnumerationConstructor {
     prototype: SVGAnimatedEnumeration;
     new(): SVGAnimatedEnumeration;
-};
+}
 
 /** Used for attributes of basic type <integer> which can be animated. */
 interface SVGAnimatedInteger {
@@ -11292,7 +11292,7 @@ interface SVGAnimatedInteger {
 declare interface SVGAnimatedIntegerConstructor {
     prototype: SVGAnimatedInteger;
     new(): SVGAnimatedInteger;
-};
+}
 
 /** Used for attributes of basic type <length> which can be animated. */
 interface SVGAnimatedLength {
@@ -11303,7 +11303,7 @@ interface SVGAnimatedLength {
 declare interface SVGAnimatedLengthConstructor {
     prototype: SVGAnimatedLength;
     new(): SVGAnimatedLength;
-};
+}
 
 /** Used for attributes of type SVGLengthList which can be animated. */
 interface SVGAnimatedLengthList {
@@ -11314,7 +11314,7 @@ interface SVGAnimatedLengthList {
 declare interface SVGAnimatedLengthListConstructor {
     prototype: SVGAnimatedLengthList;
     new(): SVGAnimatedLengthList;
-};
+}
 
 /** Used for attributes of basic type <Number> which can be animated. */
 interface SVGAnimatedNumber {
@@ -11325,7 +11325,7 @@ interface SVGAnimatedNumber {
 declare interface SVGAnimatedNumberConstructor {
     prototype: SVGAnimatedNumber;
     new(): SVGAnimatedNumber;
-};
+}
 
 /** The SVGAnimatedNumber interface is used for attributes which take a list of numbers and which can be animated. */
 interface SVGAnimatedNumberList {
@@ -11336,7 +11336,7 @@ interface SVGAnimatedNumberList {
 declare interface SVGAnimatedNumberListConstructor {
     prototype: SVGAnimatedNumberList;
     new(): SVGAnimatedNumberList;
-};
+}
 
 interface SVGAnimatedPoints {
     readonly animatedPoints: SVGPointList;
@@ -11352,7 +11352,7 @@ interface SVGAnimatedPreserveAspectRatio {
 declare interface SVGAnimatedPreserveAspectRatioConstructor {
     prototype: SVGAnimatedPreserveAspectRatio;
     new(): SVGAnimatedPreserveAspectRatio;
-};
+}
 
 /** Used for attributes of basic SVGRect which can be animated. */
 interface SVGAnimatedRect {
@@ -11363,7 +11363,7 @@ interface SVGAnimatedRect {
 declare interface SVGAnimatedRectConstructor {
     prototype: SVGAnimatedRect;
     new(): SVGAnimatedRect;
-};
+}
 
 /** The SVGAnimatedString interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this. */
 interface SVGAnimatedString {
@@ -11374,7 +11374,7 @@ interface SVGAnimatedString {
 declare interface SVGAnimatedStringConstructor {
     prototype: SVGAnimatedString;
     new(): SVGAnimatedString;
-};
+}
 
 /** Used for attributes which take a list of numbers and which can be animated. */
 interface SVGAnimatedTransformList {
@@ -11385,7 +11385,7 @@ interface SVGAnimatedTransformList {
 declare interface SVGAnimatedTransformListConstructor {
     prototype: SVGAnimatedTransformList;
     new(): SVGAnimatedTransformList;
-};
+}
 
 interface SVGAnimationElement extends SVGElement, SVGTests {
     readonly targetElement: SVGElement | null;
@@ -11405,7 +11405,7 @@ interface SVGAnimationElement extends SVGElement, SVGTests {
 declare interface SVGAnimationElementConstructor {
     prototype: SVGAnimationElement;
     new(): SVGAnimationElement;
-};
+}
 
 /** An interface for the <circle> element. The circle element is defined by the cx and cy attributes that denote the coordinates of the centre of the circle. */
 interface SVGCircleElement extends SVGGeometryElement {
@@ -11421,7 +11421,7 @@ interface SVGCircleElement extends SVGGeometryElement {
 declare interface SVGCircleElementConstructor {
     prototype: SVGCircleElement;
     new(): SVGCircleElement;
-};
+}
 
 /** Provides access to the properties of <clipPath> elements, as well as methods to manipulate them. */
 interface SVGClipPathElement extends SVGElement {
@@ -11436,7 +11436,7 @@ interface SVGClipPathElement extends SVGElement {
 declare interface SVGClipPathElementConstructor {
     prototype: SVGClipPathElement;
     new(): SVGClipPathElement;
-};
+}
 
 /** A base interface used by the component transfer function interfaces. */
 interface SVGComponentTransferFunctionElement extends SVGElement {
@@ -11468,7 +11468,7 @@ declare interface SVGComponentTransferFunctionElementConstructor {
     readonly SVG_FECOMPONENTTRANSFER_TYPE_LINEAR: number;
     readonly SVG_FECOMPONENTTRANSFER_TYPE_TABLE: number;
     readonly SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN: number;
-};
+}
 
 /** Corresponds to the <defs> element. */
 interface SVGDefsElement extends SVGGraphicsElement {
@@ -11481,7 +11481,7 @@ interface SVGDefsElement extends SVGGraphicsElement {
 declare interface SVGDefsElementConstructor {
     prototype: SVGDefsElement;
     new(): SVGDefsElement;
-};
+}
 
 /** Corresponds to the <desc> element. */
 interface SVGDescElement extends SVGElement {
@@ -11494,7 +11494,7 @@ interface SVGDescElement extends SVGElement {
 declare interface SVGDescElementConstructor {
     prototype: SVGDescElement;
     new(): SVGDescElement;
-};
+}
 
 interface SVGElementEventMap extends ElementEventMap, DocumentAndElementEventHandlersEventMap, GlobalEventHandlersEventMap {
 }
@@ -11514,7 +11514,7 @@ interface SVGElement extends Element, DocumentAndElementEventHandlers, ElementCS
 declare interface SVGElementConstructor {
     prototype: SVGElement;
     new(): SVGElement;
-};
+}
 
 /** Provides access to the properties of <ellipse> elements. */
 interface SVGEllipseElement extends SVGGeometryElement {
@@ -11531,7 +11531,7 @@ interface SVGEllipseElement extends SVGGeometryElement {
 declare interface SVGEllipseElementConstructor {
     prototype: SVGEllipseElement;
     new(): SVGEllipseElement;
-};
+}
 
 /** Corresponds to the <feBlend> element. */
 interface SVGFEBlendElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11581,7 +11581,7 @@ declare interface SVGFEBlendElementConstructor {
     readonly SVG_FEBLEND_MODE_SCREEN: number;
     readonly SVG_FEBLEND_MODE_SOFT_LIGHT: number;
     readonly SVG_FEBLEND_MODE_UNKNOWN: number;
-};
+}
 
 /** Corresponds to the <feColorMatrix> element. */
 interface SVGFEColorMatrixElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11607,7 +11607,7 @@ declare interface SVGFEColorMatrixElementConstructor {
     readonly SVG_FECOLORMATRIX_TYPE_MATRIX: number;
     readonly SVG_FECOLORMATRIX_TYPE_SATURATE: number;
     readonly SVG_FECOLORMATRIX_TYPE_UNKNOWN: number;
-};
+}
 
 /** Corresponds to the <feComponentTransfer> element. */
 interface SVGFEComponentTransferElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11621,7 +11621,7 @@ interface SVGFEComponentTransferElement extends SVGElement, SVGFilterPrimitiveSt
 declare interface SVGFEComponentTransferElementConstructor {
     prototype: SVGFEComponentTransferElement;
     new(): SVGFEComponentTransferElement;
-};
+}
 
 /** Corresponds to the <feComposite> element. */
 interface SVGFECompositeElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11655,7 +11655,7 @@ declare interface SVGFECompositeElementConstructor {
     readonly SVG_FECOMPOSITE_OPERATOR_OVER: number;
     readonly SVG_FECOMPOSITE_OPERATOR_UNKNOWN: number;
     readonly SVG_FECOMPOSITE_OPERATOR_XOR: number;
-};
+}
 
 /** Corresponds to the <feConvolveMatrix> element. */
 interface SVGFEConvolveMatrixElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11688,7 +11688,7 @@ declare interface SVGFEConvolveMatrixElementConstructor {
     readonly SVG_EDGEMODE_NONE: number;
     readonly SVG_EDGEMODE_UNKNOWN: number;
     readonly SVG_EDGEMODE_WRAP: number;
-};
+}
 
 /** Corresponds to the <feDiffuseLighting> element. */
 interface SVGFEDiffuseLightingElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11706,7 +11706,7 @@ interface SVGFEDiffuseLightingElement extends SVGElement, SVGFilterPrimitiveStan
 declare interface SVGFEDiffuseLightingElementConstructor {
     prototype: SVGFEDiffuseLightingElement;
     new(): SVGFEDiffuseLightingElement;
-};
+}
 
 /** Corresponds to the <feDisplacementMap> element. */
 interface SVGFEDisplacementMapElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11734,7 +11734,7 @@ declare interface SVGFEDisplacementMapElementConstructor {
     readonly SVG_CHANNEL_G: number;
     readonly SVG_CHANNEL_R: number;
     readonly SVG_CHANNEL_UNKNOWN: number;
-};
+}
 
 /** Corresponds to the <feDistantLight> element. */
 interface SVGFEDistantLightElement extends SVGElement {
@@ -11749,7 +11749,7 @@ interface SVGFEDistantLightElement extends SVGElement {
 declare interface SVGFEDistantLightElementConstructor {
     prototype: SVGFEDistantLightElement;
     new(): SVGFEDistantLightElement;
-};
+}
 
 interface SVGFEDropShadowElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly dx: SVGAnimatedNumber;
@@ -11767,7 +11767,7 @@ interface SVGFEDropShadowElement extends SVGElement, SVGFilterPrimitiveStandardA
 declare interface SVGFEDropShadowElementConstructor {
     prototype: SVGFEDropShadowElement;
     new(): SVGFEDropShadowElement;
-};
+}
 
 /** Corresponds to the <feFlood> element. */
 interface SVGFEFloodElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11780,7 +11780,7 @@ interface SVGFEFloodElement extends SVGElement, SVGFilterPrimitiveStandardAttrib
 declare interface SVGFEFloodElementConstructor {
     prototype: SVGFEFloodElement;
     new(): SVGFEFloodElement;
-};
+}
 
 /** Corresponds to the <feFuncA> element. */
 interface SVGFEFuncAElement extends SVGComponentTransferFunctionElement {
@@ -11793,7 +11793,7 @@ interface SVGFEFuncAElement extends SVGComponentTransferFunctionElement {
 declare interface SVGFEFuncAElementConstructor {
     prototype: SVGFEFuncAElement;
     new(): SVGFEFuncAElement;
-};
+}
 
 /** Corresponds to the <feFuncB> element. */
 interface SVGFEFuncBElement extends SVGComponentTransferFunctionElement {
@@ -11806,7 +11806,7 @@ interface SVGFEFuncBElement extends SVGComponentTransferFunctionElement {
 declare interface SVGFEFuncBElementConstructor {
     prototype: SVGFEFuncBElement;
     new(): SVGFEFuncBElement;
-};
+}
 
 /** Corresponds to the <feFuncG> element. */
 interface SVGFEFuncGElement extends SVGComponentTransferFunctionElement {
@@ -11819,7 +11819,7 @@ interface SVGFEFuncGElement extends SVGComponentTransferFunctionElement {
 declare interface SVGFEFuncGElementConstructor {
     prototype: SVGFEFuncGElement;
     new(): SVGFEFuncGElement;
-};
+}
 
 /** Corresponds to the <feFuncR> element. */
 interface SVGFEFuncRElement extends SVGComponentTransferFunctionElement {
@@ -11832,7 +11832,7 @@ interface SVGFEFuncRElement extends SVGComponentTransferFunctionElement {
 declare interface SVGFEFuncRElementConstructor {
     prototype: SVGFEFuncRElement;
     new(): SVGFEFuncRElement;
-};
+}
 
 /** Corresponds to the <feGaussianBlur> element. */
 interface SVGFEGaussianBlurElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11849,7 +11849,7 @@ interface SVGFEGaussianBlurElement extends SVGElement, SVGFilterPrimitiveStandar
 declare interface SVGFEGaussianBlurElementConstructor {
     prototype: SVGFEGaussianBlurElement;
     new(): SVGFEGaussianBlurElement;
-};
+}
 
 /** Corresponds to the <feImage> element. */
 interface SVGFEImageElement extends SVGElement, SVGFilterPrimitiveStandardAttributes, SVGURIReference {
@@ -11863,7 +11863,7 @@ interface SVGFEImageElement extends SVGElement, SVGFilterPrimitiveStandardAttrib
 declare interface SVGFEImageElementConstructor {
     prototype: SVGFEImageElement;
     new(): SVGFEImageElement;
-};
+}
 
 /** Corresponds to the <feMerge> element. */
 interface SVGFEMergeElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11876,7 +11876,7 @@ interface SVGFEMergeElement extends SVGElement, SVGFilterPrimitiveStandardAttrib
 declare interface SVGFEMergeElementConstructor {
     prototype: SVGFEMergeElement;
     new(): SVGFEMergeElement;
-};
+}
 
 /** Corresponds to the <feMergeNode> element. */
 interface SVGFEMergeNodeElement extends SVGElement {
@@ -11890,7 +11890,7 @@ interface SVGFEMergeNodeElement extends SVGElement {
 declare interface SVGFEMergeNodeElementConstructor {
     prototype: SVGFEMergeNodeElement;
     new(): SVGFEMergeNodeElement;
-};
+}
 
 /** Corresponds to the <feMorphology> element. */
 interface SVGFEMorphologyElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11913,7 +11913,7 @@ declare interface SVGFEMorphologyElementConstructor {
     readonly SVG_MORPHOLOGY_OPERATOR_DILATE: number;
     readonly SVG_MORPHOLOGY_OPERATOR_ERODE: number;
     readonly SVG_MORPHOLOGY_OPERATOR_UNKNOWN: number;
-};
+}
 
 /** Corresponds to the <feOffset> element. */
 interface SVGFEOffsetElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11929,7 +11929,7 @@ interface SVGFEOffsetElement extends SVGElement, SVGFilterPrimitiveStandardAttri
 declare interface SVGFEOffsetElementConstructor {
     prototype: SVGFEOffsetElement;
     new(): SVGFEOffsetElement;
-};
+}
 
 /** Corresponds to the <fePointLight> element. */
 interface SVGFEPointLightElement extends SVGElement {
@@ -11945,7 +11945,7 @@ interface SVGFEPointLightElement extends SVGElement {
 declare interface SVGFEPointLightElementConstructor {
     prototype: SVGFEPointLightElement;
     new(): SVGFEPointLightElement;
-};
+}
 
 /** Corresponds to the <feSpecularLighting> element. */
 interface SVGFESpecularLightingElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11964,7 +11964,7 @@ interface SVGFESpecularLightingElement extends SVGElement, SVGFilterPrimitiveSta
 declare interface SVGFESpecularLightingElementConstructor {
     prototype: SVGFESpecularLightingElement;
     new(): SVGFESpecularLightingElement;
-};
+}
 
 /** Corresponds to the <feSpotLight> element. */
 interface SVGFESpotLightElement extends SVGElement {
@@ -11985,7 +11985,7 @@ interface SVGFESpotLightElement extends SVGElement {
 declare interface SVGFESpotLightElementConstructor {
     prototype: SVGFESpotLightElement;
     new(): SVGFESpotLightElement;
-};
+}
 
 /** Corresponds to the <feTile> element. */
 interface SVGFETileElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -11999,7 +11999,7 @@ interface SVGFETileElement extends SVGElement, SVGFilterPrimitiveStandardAttribu
 declare interface SVGFETileElementConstructor {
     prototype: SVGFETileElement;
     new(): SVGFETileElement;
-};
+}
 
 /** Corresponds to the <feTurbulence> element. */
 interface SVGFETurbulenceElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
@@ -12030,7 +12030,7 @@ declare interface SVGFETurbulenceElementConstructor {
     readonly SVG_TURBULENCE_TYPE_FRACTALNOISE: number;
     readonly SVG_TURBULENCE_TYPE_TURBULENCE: number;
     readonly SVG_TURBULENCE_TYPE_UNKNOWN: number;
-};
+}
 
 /** Provides access to the properties of <filter> elements, as well as methods to manipulate them. */
 interface SVGFilterElement extends SVGElement, SVGURIReference {
@@ -12049,7 +12049,7 @@ interface SVGFilterElement extends SVGElement, SVGURIReference {
 declare interface SVGFilterElementConstructor {
     prototype: SVGFilterElement;
     new(): SVGFilterElement;
-};
+}
 
 interface SVGFilterPrimitiveStandardAttributes {
     readonly height: SVGAnimatedLength;
@@ -12079,7 +12079,7 @@ interface SVGForeignObjectElement extends SVGGraphicsElement {
 declare interface SVGForeignObjectElementConstructor {
     prototype: SVGForeignObjectElement;
     new(): SVGForeignObjectElement;
-};
+}
 
 /** Corresponds to the <g> element. */
 interface SVGGElement extends SVGGraphicsElement {
@@ -12092,7 +12092,7 @@ interface SVGGElement extends SVGGraphicsElement {
 declare interface SVGGElementConstructor {
     prototype: SVGGElement;
     new(): SVGGElement;
-};
+}
 
 interface SVGGeometryElement extends SVGGraphicsElement {
     readonly pathLength: SVGAnimatedNumber;
@@ -12109,7 +12109,7 @@ interface SVGGeometryElement extends SVGGraphicsElement {
 declare interface SVGGeometryElementConstructor {
     prototype: SVGGeometryElement;
     new(): SVGGeometryElement;
-};
+}
 
 /** The SVGGradient interface is a base interface used by SVGLinearGradientElement and SVGRadialGradientElement. */
 interface SVGGradientElement extends SVGElement, SVGURIReference {
@@ -12133,7 +12133,7 @@ declare interface SVGGradientElementConstructor {
     readonly SVG_SPREADMETHOD_REFLECT: number;
     readonly SVG_SPREADMETHOD_REPEAT: number;
     readonly SVG_SPREADMETHOD_UNKNOWN: number;
-};
+}
 
 /** SVG elements whose primary purpose is to directly render graphics into a group. */
 interface SVGGraphicsElement extends SVGElement, SVGTests {
@@ -12150,7 +12150,7 @@ interface SVGGraphicsElement extends SVGElement, SVGTests {
 declare interface SVGGraphicsElementConstructor {
     prototype: SVGGraphicsElement;
     new(): SVGGraphicsElement;
-};
+}
 
 /** Corresponds to the <image> element. */
 interface SVGImageElement extends SVGGraphicsElement, SVGURIReference {
@@ -12168,7 +12168,7 @@ interface SVGImageElement extends SVGGraphicsElement, SVGURIReference {
 declare interface SVGImageElementConstructor {
     prototype: SVGImageElement;
     new(): SVGImageElement;
-};
+}
 
 /** Correspond to the <length> basic data type. */
 interface SVGLength {
@@ -12205,7 +12205,7 @@ declare interface SVGLengthConstructor {
     readonly SVG_LENGTHTYPE_PT: number;
     readonly SVG_LENGTHTYPE_PX: number;
     readonly SVG_LENGTHTYPE_UNKNOWN: number;
-};
+}
 
 /** The SVGLengthList defines a list of SVGLength objects. */
 interface SVGLengthList {
@@ -12224,7 +12224,7 @@ interface SVGLengthList {
 declare interface SVGLengthListConstructor {
     prototype: SVGLengthList;
     new(): SVGLengthList;
-};
+}
 
 /** Provides access to the properties of <line> elements, as well as methods to manipulate them. */
 interface SVGLineElement extends SVGGeometryElement {
@@ -12241,7 +12241,7 @@ interface SVGLineElement extends SVGGeometryElement {
 declare interface SVGLineElementConstructor {
     prototype: SVGLineElement;
     new(): SVGLineElement;
-};
+}
 
 /** Corresponds to the <linearGradient> element. */
 interface SVGLinearGradientElement extends SVGGradientElement {
@@ -12258,7 +12258,7 @@ interface SVGLinearGradientElement extends SVGGradientElement {
 declare interface SVGLinearGradientElementConstructor {
     prototype: SVGLinearGradientElement;
     new(): SVGLinearGradientElement;
-};
+}
 
 interface SVGMPathElement extends SVGElement, SVGURIReference {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGMPathElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -12270,7 +12270,7 @@ interface SVGMPathElement extends SVGElement, SVGURIReference {
 declare interface SVGMPathElementConstructor {
     prototype: SVGMPathElement;
     new(): SVGMPathElement;
-};
+}
 
 interface SVGMarkerElement extends SVGElement, SVGFitToViewBox {
     readonly markerHeight: SVGAnimatedLength;
@@ -12303,7 +12303,7 @@ declare interface SVGMarkerElementConstructor {
     readonly SVG_MARKER_ORIENT_ANGLE: number;
     readonly SVG_MARKER_ORIENT_AUTO: number;
     readonly SVG_MARKER_ORIENT_UNKNOWN: number;
-};
+}
 
 /** Provides access to the properties of <mask> elements, as well as methods to manipulate them. */
 interface SVGMaskElement extends SVGElement {
@@ -12322,7 +12322,7 @@ interface SVGMaskElement extends SVGElement {
 declare interface SVGMaskElementConstructor {
     prototype: SVGMaskElement;
     new(): SVGMaskElement;
-};
+}
 
 /** Corresponds to the <metadata> element. */
 interface SVGMetadataElement extends SVGElement {
@@ -12335,7 +12335,7 @@ interface SVGMetadataElement extends SVGElement {
 declare interface SVGMetadataElementConstructor {
     prototype: SVGMetadataElement;
     new(): SVGMetadataElement;
-};
+}
 
 /** Corresponds to the <number> basic data type. */
 interface SVGNumber {
@@ -12345,7 +12345,7 @@ interface SVGNumber {
 declare interface SVGNumberConstructor {
     prototype: SVGNumber;
     new(): SVGNumber;
-};
+}
 
 /** The SVGNumberList defines a list of SVGNumber objects. */
 interface SVGNumberList {
@@ -12364,7 +12364,7 @@ interface SVGNumberList {
 declare interface SVGNumberListConstructor {
     prototype: SVGNumberList;
     new(): SVGNumberList;
-};
+}
 
 /** Corresponds to the <path> element. */
 interface SVGPathElement extends SVGGeometryElement {
@@ -12377,7 +12377,7 @@ interface SVGPathElement extends SVGGeometryElement {
 declare interface SVGPathElementConstructor {
     prototype: SVGPathElement;
     new(): SVGPathElement;
-};
+}
 
 /** Corresponds to the <pattern> element. */
 interface SVGPatternElement extends SVGElement, SVGFitToViewBox, SVGURIReference {
@@ -12397,7 +12397,7 @@ interface SVGPatternElement extends SVGElement, SVGFitToViewBox, SVGURIReference
 declare interface SVGPatternElementConstructor {
     prototype: SVGPatternElement;
     new(): SVGPatternElement;
-};
+}
 
 interface SVGPointList {
     readonly length: number;
@@ -12415,7 +12415,7 @@ interface SVGPointList {
 declare interface SVGPointListConstructor {
     prototype: SVGPointList;
     new(): SVGPointList;
-};
+}
 
 /** Provides access to the properties of <polygon> elements, as well as methods to manipulate them. */
 interface SVGPolygonElement extends SVGGeometryElement, SVGAnimatedPoints {
@@ -12428,7 +12428,7 @@ interface SVGPolygonElement extends SVGGeometryElement, SVGAnimatedPoints {
 declare interface SVGPolygonElementConstructor {
     prototype: SVGPolygonElement;
     new(): SVGPolygonElement;
-};
+}
 
 /** Provides access to the properties of <polyline> elements, as well as methods to manipulate them. */
 interface SVGPolylineElement extends SVGGeometryElement, SVGAnimatedPoints {
@@ -12441,7 +12441,7 @@ interface SVGPolylineElement extends SVGGeometryElement, SVGAnimatedPoints {
 declare interface SVGPolylineElementConstructor {
     prototype: SVGPolylineElement;
     new(): SVGPolylineElement;
-};
+}
 
 /** Corresponds to the preserveAspectRatio attribute, which is available for some of SVG's elements. */
 interface SVGPreserveAspectRatio {
@@ -12480,7 +12480,7 @@ declare interface SVGPreserveAspectRatioConstructor {
     readonly SVG_PRESERVEASPECTRATIO_XMINYMAX: number;
     readonly SVG_PRESERVEASPECTRATIO_XMINYMID: number;
     readonly SVG_PRESERVEASPECTRATIO_XMINYMIN: number;
-};
+}
 
 /** Corresponds to the <RadialGradient> element. */
 interface SVGRadialGradientElement extends SVGGradientElement {
@@ -12499,7 +12499,7 @@ interface SVGRadialGradientElement extends SVGGradientElement {
 declare interface SVGRadialGradientElementConstructor {
     prototype: SVGRadialGradientElement;
     new(): SVGRadialGradientElement;
-};
+}
 
 /** Provides access to the properties of <rect> elements, as well as methods to manipulate them. */
 interface SVGRectElement extends SVGGeometryElement {
@@ -12518,7 +12518,7 @@ interface SVGRectElement extends SVGGeometryElement {
 declare interface SVGRectElementConstructor {
     prototype: SVGRectElement;
     new(): SVGRectElement;
-};
+}
 
 interface SVGSVGElementEventMap extends SVGElementEventMap, WindowEventHandlersEventMap {
 }
@@ -12567,7 +12567,7 @@ interface SVGSVGElement extends SVGGraphicsElement, SVGFitToViewBox, WindowEvent
 declare interface SVGSVGElementConstructor {
     prototype: SVGSVGElement;
     new(): SVGSVGElement;
-};
+}
 
 /** Corresponds to the SVG <script> element. */
 interface SVGScriptElement extends SVGElement, SVGURIReference {
@@ -12581,7 +12581,7 @@ interface SVGScriptElement extends SVGElement, SVGURIReference {
 declare interface SVGScriptElementConstructor {
     prototype: SVGScriptElement;
     new(): SVGScriptElement;
-};
+}
 
 interface SVGSetElement extends SVGAnimationElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGSetElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -12593,7 +12593,7 @@ interface SVGSetElement extends SVGAnimationElement {
 declare interface SVGSetElementConstructor {
     prototype: SVGSetElement;
     new(): SVGSetElement;
-};
+}
 
 /** Corresponds to the <stop> element. */
 interface SVGStopElement extends SVGElement {
@@ -12607,7 +12607,7 @@ interface SVGStopElement extends SVGElement {
 declare interface SVGStopElementConstructor {
     prototype: SVGStopElement;
     new(): SVGStopElement;
-};
+}
 
 /** The SVGStringList defines a list of DOMString objects. */
 interface SVGStringList {
@@ -12626,7 +12626,7 @@ interface SVGStringList {
 declare interface SVGStringListConstructor {
     prototype: SVGStringList;
     new(): SVGStringList;
-};
+}
 
 /** Corresponds to the SVG <style> element. */
 interface SVGStyleElement extends SVGElement, LinkStyle {
@@ -12643,7 +12643,7 @@ interface SVGStyleElement extends SVGElement, LinkStyle {
 declare interface SVGStyleElementConstructor {
     prototype: SVGStyleElement;
     new(): SVGStyleElement;
-};
+}
 
 /** Corresponds to the <switch> element. */
 interface SVGSwitchElement extends SVGGraphicsElement {
@@ -12656,7 +12656,7 @@ interface SVGSwitchElement extends SVGGraphicsElement {
 declare interface SVGSwitchElementConstructor {
     prototype: SVGSwitchElement;
     new(): SVGSwitchElement;
-};
+}
 
 /** Corresponds to the <symbol> element. */
 interface SVGSymbolElement extends SVGElement, SVGFitToViewBox {
@@ -12669,7 +12669,7 @@ interface SVGSymbolElement extends SVGElement, SVGFitToViewBox {
 declare interface SVGSymbolElementConstructor {
     prototype: SVGSymbolElement;
     new(): SVGSymbolElement;
-};
+}
 
 /** A <tspan> element. */
 interface SVGTSpanElement extends SVGTextPositioningElement {
@@ -12682,7 +12682,7 @@ interface SVGTSpanElement extends SVGTextPositioningElement {
 declare interface SVGTSpanElementConstructor {
     prototype: SVGTSpanElement;
     new(): SVGTSpanElement;
-};
+}
 
 interface SVGTests {
     readonly requiredExtensions: SVGStringList;
@@ -12718,7 +12718,7 @@ declare interface SVGTextContentElementConstructor {
     readonly LENGTHADJUST_SPACING: number;
     readonly LENGTHADJUST_SPACINGANDGLYPHS: number;
     readonly LENGTHADJUST_UNKNOWN: number;
-};
+}
 
 /** Corresponds to the <text> elements. */
 interface SVGTextElement extends SVGTextPositioningElement {
@@ -12731,7 +12731,7 @@ interface SVGTextElement extends SVGTextPositioningElement {
 declare interface SVGTextElementConstructor {
     prototype: SVGTextElement;
     new(): SVGTextElement;
-};
+}
 
 /** Corresponds to the <textPath> element. */
 interface SVGTextPathElement extends SVGTextContentElement, SVGURIReference {
@@ -12759,7 +12759,7 @@ declare interface SVGTextPathElementConstructor {
     readonly TEXTPATH_SPACINGTYPE_AUTO: number;
     readonly TEXTPATH_SPACINGTYPE_EXACT: number;
     readonly TEXTPATH_SPACINGTYPE_UNKNOWN: number;
-};
+}
 
 /** Implemented by elements that support attributes that position individual text glyphs. It is inherited by SVGTextElement, SVGTSpanElement, SVGTRefElement and SVGAltGlyphElement. */
 interface SVGTextPositioningElement extends SVGTextContentElement {
@@ -12777,7 +12777,7 @@ interface SVGTextPositioningElement extends SVGTextContentElement {
 declare interface SVGTextPositioningElementConstructor {
     prototype: SVGTextPositioningElement;
     new(): SVGTextPositioningElement;
-};
+}
 
 /** Corresponds to the <title> element. */
 interface SVGTitleElement extends SVGElement {
@@ -12790,7 +12790,7 @@ interface SVGTitleElement extends SVGElement {
 declare interface SVGTitleElementConstructor {
     prototype: SVGTitleElement;
     new(): SVGTitleElement;
-};
+}
 
 /** SVGTransform is the interface for one of the component transformations within an SVGTransformList; thus, an SVGTransform object corresponds to a single component (e.g., scale(…) or matrix(…)) within a transform attribute. */
 interface SVGTransform {
@@ -12822,7 +12822,7 @@ declare interface SVGTransformConstructor {
     readonly SVG_TRANSFORM_SKEWY: number;
     readonly SVG_TRANSFORM_TRANSLATE: number;
     readonly SVG_TRANSFORM_UNKNOWN: number;
-};
+}
 
 /** The SVGTransformList defines a list of SVGTransform objects. */
 interface SVGTransformList {
@@ -12843,7 +12843,7 @@ interface SVGTransformList {
 declare interface SVGTransformListConstructor {
     prototype: SVGTransformList;
     new(): SVGTransformList;
-};
+}
 
 interface SVGURIReference {
     readonly href: SVGAnimatedString;
@@ -12862,7 +12862,7 @@ declare interface SVGUnitTypesConstructor {
     readonly SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: number;
     readonly SVG_UNIT_TYPE_UNKNOWN: number;
     readonly SVG_UNIT_TYPE_USERSPACEONUSE: number;
-};
+}
 
 /** Corresponds to the <use> element. */
 interface SVGUseElement extends SVGGraphicsElement, SVGURIReference {
@@ -12879,7 +12879,7 @@ interface SVGUseElement extends SVGGraphicsElement, SVGURIReference {
 declare interface SVGUseElementConstructor {
     prototype: SVGUseElement;
     new(): SVGUseElement;
-};
+}
 
 /** Provides access to the properties of <view> elements, as well as methods to manipulate them. */
 interface SVGViewElement extends SVGElement, SVGFitToViewBox {
@@ -12892,7 +12892,7 @@ interface SVGViewElement extends SVGElement, SVGFitToViewBox {
 declare interface SVGViewElementConstructor {
     prototype: SVGViewElement;
     new(): SVGViewElement;
-};
+}
 
 /** A screen, usually the one on which the current window is being rendered, and is obtained using window.screen. */
 interface Screen {
@@ -12908,7 +12908,7 @@ interface Screen {
 declare interface ScreenConstructor {
     prototype: Screen;
     new(): Screen;
-};
+}
 
 interface ScreenOrientationEventMap {
     "change": Event;
@@ -12929,7 +12929,7 @@ interface ScreenOrientation extends EventTarget {
 declare interface ScreenOrientationConstructor {
     prototype: ScreenOrientation;
     new(): ScreenOrientation;
-};
+}
 
 interface ScriptProcessorNodeEventMap {
     "audioprocess": AudioProcessingEvent;
@@ -12954,7 +12954,7 @@ interface ScriptProcessorNode extends AudioNode {
 declare interface ScriptProcessorNodeConstructor {
     prototype: ScriptProcessorNode;
     new(): ScriptProcessorNode;
-};
+}
 
 /** Inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated. */
 interface SecurityPolicyViolationEvent extends Event {
@@ -12975,7 +12975,7 @@ interface SecurityPolicyViolationEvent extends Event {
 declare interface SecurityPolicyViolationEventConstructor {
     prototype: SecurityPolicyViolationEvent;
     new(type: string, eventInitDict?: SecurityPolicyViolationEventInit): SecurityPolicyViolationEvent;
-};
+}
 
 /** A Selection object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call Window.getSelection(). */
 interface Selection {
@@ -13007,7 +13007,7 @@ declare interface SelectionConstructor {
     prototype: Selection;
     new(): Selection;
     toString(): string;
-};
+}
 
 interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
     "statechange": Event;
@@ -13032,7 +13032,7 @@ interface ServiceWorker extends EventTarget, AbstractWorker {
 declare interface ServiceWorkerConstructor {
     prototype: ServiceWorker;
     new(): ServiceWorker;
-};
+}
 
 interface ServiceWorkerContainerEventMap {
     "controllerchange": Event;
@@ -13063,7 +13063,7 @@ interface ServiceWorkerContainer extends EventTarget {
 declare interface ServiceWorkerContainerConstructor {
     prototype: ServiceWorkerContainer;
     new(): ServiceWorkerContainer;
-};
+}
 
 interface ServiceWorkerRegistrationEventMap {
     "updatefound": Event;
@@ -13094,7 +13094,7 @@ interface ServiceWorkerRegistration extends EventTarget {
 declare interface ServiceWorkerRegistrationConstructor {
     prototype: ServiceWorkerRegistration;
     new(): ServiceWorkerRegistration;
-};
+}
 
 interface ShadowRootEventMap {
     "slotchange": Event;
@@ -13115,7 +13115,7 @@ interface ShadowRoot extends DocumentFragment, DocumentOrShadowRoot, InnerHTML {
 declare interface ShadowRootConstructor {
     prototype: ShadowRoot;
     new(): ShadowRoot;
-};
+}
 
 interface SharedWorker extends EventTarget, AbstractWorker {
     /** Returns sharedWorker's MessagePort object which can be used to communicate with the global environment. */
@@ -13129,7 +13129,7 @@ interface SharedWorker extends EventTarget, AbstractWorker {
 declare interface SharedWorkerConstructor {
     prototype: SharedWorker;
     new(scriptURL: string | URL, options?: string | WorkerOptions): SharedWorker;
-};
+}
 
 interface Slottable {
     readonly assignedSlot: HTMLSlotElement | null;
@@ -13169,7 +13169,7 @@ interface SourceBuffer extends EventTarget {
 declare interface SourceBufferConstructor {
     prototype: SourceBuffer;
     new(): SourceBuffer;
-};
+}
 
 interface SourceBufferListEventMap {
     "addsourcebuffer": Event;
@@ -13191,7 +13191,7 @@ interface SourceBufferList extends EventTarget {
 declare interface SourceBufferListConstructor {
     prototype: SourceBufferList;
     new(): SourceBufferList;
-};
+}
 
 interface SpeechRecognitionAlternative {
     readonly confidence: number;
@@ -13201,7 +13201,7 @@ interface SpeechRecognitionAlternative {
 declare interface SpeechRecognitionAlternativeConstructor {
     prototype: SpeechRecognitionAlternative;
     new(): SpeechRecognitionAlternative;
-};
+}
 
 interface SpeechRecognitionResult {
     readonly isFinal: boolean;
@@ -13213,7 +13213,7 @@ interface SpeechRecognitionResult {
 declare interface SpeechRecognitionResultConstructor {
     prototype: SpeechRecognitionResult;
     new(): SpeechRecognitionResult;
-};
+}
 
 interface SpeechRecognitionResultList {
     readonly length: number;
@@ -13224,7 +13224,7 @@ interface SpeechRecognitionResultList {
 declare interface SpeechRecognitionResultListConstructor {
     prototype: SpeechRecognitionResultList;
     new(): SpeechRecognitionResultList;
-};
+}
 
 interface SpeechSynthesisEventMap {
     "voiceschanged": Event;
@@ -13250,7 +13250,7 @@ interface SpeechSynthesis extends EventTarget {
 declare interface SpeechSynthesisConstructor {
     prototype: SpeechSynthesis;
     new(): SpeechSynthesis;
-};
+}
 
 interface SpeechSynthesisErrorEvent extends SpeechSynthesisEvent {
     readonly error: SpeechSynthesisErrorCode;
@@ -13259,7 +13259,7 @@ interface SpeechSynthesisErrorEvent extends SpeechSynthesisEvent {
 declare interface SpeechSynthesisErrorEventConstructor {
     prototype: SpeechSynthesisErrorEvent;
     new(type: string, eventInitDict: SpeechSynthesisErrorEventInit): SpeechSynthesisErrorEvent;
-};
+}
 
 /** This Web Speech API interface contains information about the current state of SpeechSynthesisUtterance objects that have been processed in the speech service. */
 interface SpeechSynthesisEvent extends Event {
@@ -13273,7 +13273,7 @@ interface SpeechSynthesisEvent extends Event {
 declare interface SpeechSynthesisEventConstructor {
     prototype: SpeechSynthesisEvent;
     new(type: string, eventInitDict: SpeechSynthesisEventInit): SpeechSynthesisEvent;
-};
+}
 
 interface SpeechSynthesisUtteranceEventMap {
     "boundary": SpeechSynthesisEvent;
@@ -13309,7 +13309,7 @@ interface SpeechSynthesisUtterance extends EventTarget {
 declare interface SpeechSynthesisUtteranceConstructor {
     prototype: SpeechSynthesisUtterance;
     new(text?: string): SpeechSynthesisUtterance;
-};
+}
 
 /** This Web Speech API interface represents a voice that the system supports. Every SpeechSynthesisVoice has its own relative speech service including information about language, name and URI. */
 interface SpeechSynthesisVoice {
@@ -13323,7 +13323,7 @@ interface SpeechSynthesisVoice {
 declare interface SpeechSynthesisVoiceConstructor {
     prototype: SpeechSynthesisVoice;
     new(): SpeechSynthesisVoice;
-};
+}
 
 interface StaticRange extends AbstractRange {
 }
@@ -13331,7 +13331,7 @@ interface StaticRange extends AbstractRange {
 declare interface StaticRangeConstructor {
     prototype: StaticRange;
     new(init: StaticRangeInit): StaticRange;
-};
+}
 
 /** The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode. */
 interface StereoPannerNode extends AudioNode {
@@ -13341,7 +13341,7 @@ interface StereoPannerNode extends AudioNode {
 declare interface StereoPannerNodeConstructor {
     prototype: StereoPannerNode;
     new(context: BaseAudioContext, options?: StereoPannerOptions): StereoPannerNode;
-};
+}
 
 /** This Web Storage API interface provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items. */
 interface Storage {
@@ -13377,7 +13377,7 @@ interface Storage {
 declare interface StorageConstructor {
     prototype: Storage;
     new(): Storage;
-};
+}
 
 /** A StorageEvent is sent to a window when a storage area it has access to is changed within the context of another document. */
 interface StorageEvent extends Event {
@@ -13397,7 +13397,7 @@ interface StorageEvent extends Event {
 declare interface StorageEventConstructor {
     prototype: StorageEvent;
     new(type: string, eventInitDict?: StorageEventInit): StorageEvent;
-};
+}
 
 /** Available only in secure contexts. */
 interface StorageManager {
@@ -13410,7 +13410,7 @@ interface StorageManager {
 declare interface StorageManagerConstructor {
     prototype: StorageManager;
     new(): StorageManager;
-};
+}
 
 /** @deprecated */
 interface StyleMedia {
@@ -13432,7 +13432,7 @@ interface StyleSheet {
 declare interface StyleSheetConstructor {
     prototype: StyleSheet;
     new(): StyleSheet;
-};
+}
 
 /** A list of StyleSheet. */
 interface StyleSheetList {
@@ -13444,7 +13444,7 @@ interface StyleSheetList {
 declare interface StyleSheetListConstructor {
     prototype: StyleSheetList;
     new(): StyleSheetList;
-};
+}
 
 interface SubmitEvent extends Event {
     /** Returns the element representing the submit button that triggered the form submission, or null if the submission was not triggered by a button. */
@@ -13454,7 +13454,7 @@ interface SubmitEvent extends Event {
 declare interface SubmitEventConstructor {
     prototype: SubmitEvent;
     new(type: string, eventInitDict?: SubmitEventInit): SubmitEvent;
-};
+}
 
 /**
  * This Web Crypto API interface provides a number of low-level cryptographic functions. It is accessed via the Crypto.subtle properties available in a window context (via Window.crypto).
@@ -13482,7 +13482,7 @@ interface SubtleCrypto {
 declare interface SubtleCryptoConstructor {
     prototype: SubtleCrypto;
     new(): SubtleCrypto;
-};
+}
 
 /** The textual content of Element or Attr. If an element has no markup within its content, it has a single child implementing Text that contains the element's text. However, if the element contains markup, it is parsed into information items and Text nodes that form its children. */
 interface Text extends CharacterData, Slottable {
@@ -13495,7 +13495,7 @@ interface Text extends CharacterData, Slottable {
 declare interface TextConstructor {
     prototype: Text;
     new(data?: string): Text;
-};
+}
 
 /** A decoder for a specific method, that is a specific character encoding, like utf-8, iso-8859-2, koi8, cp1261, gbk, etc. A decoder takes a stream of bytes as input and emits a stream of code points. For a more scalable, non-native library, see StringView – a C-like representation of strings based on typed arrays. */
 interface TextDecoder extends TextDecoderCommon {
@@ -13518,7 +13518,7 @@ interface TextDecoder extends TextDecoderCommon {
 declare interface TextDecoderConstructor {
     prototype: TextDecoder;
     new(label?: string, options?: TextDecoderOptions): TextDecoder;
-};
+}
 
 interface TextDecoderCommon {
     /** Returns encoding's name, lowercased. */
@@ -13537,7 +13537,7 @@ interface TextDecoderStream extends GenericTransformStream, TextDecoderCommon {
 declare interface TextDecoderStreamConstructor {
     prototype: TextDecoderStream;
     new(label?: string, options?: TextDecoderOptions): TextDecoderStream;
-};
+}
 
 /** TextEncoder takes a stream of code points as input and emits a stream of bytes. For a more scalable, non-native library, see StringView – a C-like representation of strings based on typed arrays. */
 interface TextEncoder extends TextEncoderCommon {
@@ -13550,7 +13550,7 @@ interface TextEncoder extends TextEncoderCommon {
 declare interface TextEncoderConstructor {
     prototype: TextEncoder;
     new(): TextEncoder;
-};
+}
 
 interface TextEncoderCommon {
     /** Returns "utf-8". */
@@ -13565,7 +13565,7 @@ interface TextEncoderStream extends GenericTransformStream, TextEncoderCommon {
 declare interface TextEncoderStreamConstructor {
     prototype: TextEncoderStream;
     new(): TextEncoderStream;
-};
+}
 
 /** The dimensions of a piece of text in the canvas, as created by the CanvasRenderingContext2D.measureText() method. */
 interface TextMetrics {
@@ -13588,7 +13588,7 @@ interface TextMetrics {
 declare interface TextMetricsConstructor {
     prototype: TextMetrics;
     new(): TextMetrics;
-};
+}
 
 interface TextTrackEventMap {
     "cuechange": Event;
@@ -13636,7 +13636,7 @@ interface TextTrack extends EventTarget {
 declare interface TextTrackConstructor {
     prototype: TextTrack;
     new(): TextTrack;
-};
+}
 
 interface TextTrackCueEventMap {
     "enter": Event;
@@ -13682,7 +13682,7 @@ interface TextTrackCue extends EventTarget {
 declare interface TextTrackCueConstructor {
     prototype: TextTrackCue;
     new(): TextTrackCue;
-};
+}
 
 interface TextTrackCueList {
     /** Returns the number of cues in the list. */
@@ -13699,7 +13699,7 @@ interface TextTrackCueList {
 declare interface TextTrackCueListConstructor {
     prototype: TextTrackCueList;
     new(): TextTrackCueList;
-};
+}
 
 interface TextTrackListEventMap {
     "addtrack": TrackEvent;
@@ -13723,7 +13723,7 @@ interface TextTrackList extends EventTarget {
 declare interface TextTrackListConstructor {
     prototype: TextTrackList;
     new(): TextTrackList;
-};
+}
 
 /** Used to represent a set of time ranges, primarily for the purpose of tracking which portions of media have been buffered when loading it for use by the <audio> and <video> elements. */
 interface TimeRanges {
@@ -13746,7 +13746,7 @@ interface TimeRanges {
 declare interface TimeRangesConstructor {
     prototype: TimeRanges;
     new(): TimeRanges;
-};
+}
 
 /** A single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad. */
 interface Touch {
@@ -13767,7 +13767,7 @@ interface Touch {
 declare interface TouchConstructor {
     prototype: Touch;
     new(touchInitDict: TouchInit): Touch;
-};
+}
 
 /** An event sent when the state of contacts with a touch-sensitive surface changes. This surface can be a touch screen or trackpad, for example. The event can describe one or more points of contact with the screen and includes support for detecting movement, addition and removal of contact points, and so forth. */
 interface TouchEvent extends UIEvent {
@@ -13783,7 +13783,7 @@ interface TouchEvent extends UIEvent {
 declare interface TouchEventConstructor {
     prototype: TouchEvent;
     new(type: string, eventInitDict?: TouchEventInit): TouchEvent;
-};
+}
 
 /** A list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding TouchList object would have one Touch object for each finger, for a total of three entries. */
 interface TouchList {
@@ -13795,7 +13795,7 @@ interface TouchList {
 declare interface TouchListConstructor {
     prototype: TouchList;
     new(): TouchList;
-};
+}
 
 /** The TrackEvent interface, part of the HTML DOM specification, is used for events which represent changes to the set of available tracks on an HTML media element; these events are addtrack and removetrack. */
 interface TrackEvent extends Event {
@@ -13806,7 +13806,7 @@ interface TrackEvent extends Event {
 declare interface TrackEventConstructor {
     prototype: TrackEvent;
     new(type: string, eventInitDict?: TrackEventInit): TrackEvent;
-};
+}
 
 interface TransformStream<I = any, O = any> {
     readonly readable: ReadableStream<O>;
@@ -13816,7 +13816,7 @@ interface TransformStream<I = any, O = any> {
 declare interface TransformStreamConstructor {
     prototype: TransformStream;
     new <I = any, O = any>(transformer?: Transformer<I, O>, writableStrategy?: QueuingStrategy<I>, readableStrategy?: QueuingStrategy<O>): TransformStream<I, O>;
-};
+}
 
 interface TransformStreamDefaultController<O = any> {
     readonly desiredSize: number | null;
@@ -13828,7 +13828,7 @@ interface TransformStreamDefaultController<O = any> {
 declare interface TransformStreamDefaultControllerConstructor {
     prototype: TransformStreamDefaultController;
     new(): TransformStreamDefaultController;
-};
+}
 
 /** Events providing information related to transitions. */
 interface TransitionEvent extends Event {
@@ -13840,7 +13840,7 @@ interface TransitionEvent extends Event {
 declare interface TransitionEventConstructor {
     prototype: TransitionEvent;
     new(type: string, transitionEventInitDict?: TransitionEventInit): TransitionEvent;
-};
+}
 
 /** The nodes of a document subtree and a position within them. */
 interface TreeWalker {
@@ -13860,7 +13860,7 @@ interface TreeWalker {
 declare interface TreeWalkerConstructor {
     prototype: TreeWalker;
     new(): TreeWalker;
-};
+}
 
 /** Simple user interface events. */
 interface UIEvent extends Event {
@@ -13875,7 +13875,7 @@ interface UIEvent extends Event {
 declare interface UIEventConstructor {
     prototype: UIEvent;
     new(type: string, eventInitDict?: UIEventInit): UIEvent;
-};
+}
 
 /** The URL interface represents an object providing static methods used for creating object URLs. */
 interface URL {
@@ -13900,7 +13900,7 @@ declare interface URLConstructor {
     new(url: string | URL, base?: string | URL): URL;
     createObjectURL(obj: Blob | MediaSource): string;
     revokeObjectURL(url: string): void;
-};
+}
 
 type webkitURL = URL;
 
@@ -13927,7 +13927,7 @@ declare interface URLSearchParamsConstructor {
     prototype: URLSearchParams;
     new(init?: string[][] | Record<string, string> | string | URLSearchParams): URLSearchParams;
     toString(): string;
-};
+}
 
 interface VTTCue extends TextTrackCue {
     align: AlignSetting;
@@ -13950,7 +13950,7 @@ interface VTTCue extends TextTrackCue {
 declare interface VTTCueConstructor {
     prototype: VTTCue;
     new(startTime: number, endTime: number, text: string): VTTCue;
-};
+}
 
 interface VTTRegion {
     id: string;
@@ -13966,7 +13966,7 @@ interface VTTRegion {
 declare interface VTTRegionConstructor {
     prototype: VTTRegion;
     new(): VTTRegion;
-};
+}
 
 /** The validity states that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid. */
 interface ValidityState {
@@ -13986,7 +13986,7 @@ interface ValidityState {
 declare interface ValidityStateConstructor {
     prototype: ValidityState;
     new(): ValidityState;
-};
+}
 
 /** Returned by the HTMLVideoElement.getVideoPlaybackQuality() method and contains metrics that can be used to determine the playback quality of a video. */
 interface VideoPlaybackQuality {
@@ -14000,7 +14000,7 @@ interface VideoPlaybackQuality {
 declare interface VideoPlaybackQualityConstructor {
     prototype: VideoPlaybackQuality;
     new(): VideoPlaybackQuality;
-};
+}
 
 interface VisualViewportEventMap {
     "resize": Event;
@@ -14026,7 +14026,7 @@ interface VisualViewport extends EventTarget {
 declare interface VisualViewportConstructor {
     prototype: VisualViewport;
     new(): VisualViewport;
-};
+}
 
 interface WEBGL_color_buffer_float {
     readonly FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT: GLenum;
@@ -14179,7 +14179,7 @@ interface WaveShaperNode extends AudioNode {
 declare interface WaveShaperNodeConstructor {
     prototype: WaveShaperNode;
     new(context: BaseAudioContext, options?: WaveShaperOptions): WaveShaperNode;
-};
+}
 
 interface WebGL2RenderingContext extends WebGL2RenderingContextBase, WebGL2RenderingContextOverloads, WebGLRenderingContextBase {
 }
@@ -14746,7 +14746,7 @@ declare interface WebGL2RenderingContextConstructor {
     readonly VERTEX_SHADER: GLenum;
     readonly VIEWPORT: GLenum;
     readonly ZERO: GLenum;
-};
+}
 
 interface WebGL2RenderingContextBase {
     beginQuery(target: GLenum, query: WebGLQuery): void;
@@ -15155,7 +15155,7 @@ interface WebGLActiveInfo {
 declare interface WebGLActiveInfoConstructor {
     prototype: WebGLActiveInfo;
     new(): WebGLActiveInfo;
-};
+}
 
 /** Part of the WebGL API and represents an opaque buffer object storing data such as vertices or colors. */
 interface WebGLBuffer {
@@ -15164,7 +15164,7 @@ interface WebGLBuffer {
 declare interface WebGLBufferConstructor {
     prototype: WebGLBuffer;
     new(): WebGLBuffer;
-};
+}
 
 /** The WebContextEvent interface is part of the WebGL API and is an interface for an event that is generated in response to a status change to the WebGL rendering context. */
 interface WebGLContextEvent extends Event {
@@ -15174,7 +15174,7 @@ interface WebGLContextEvent extends Event {
 declare interface WebGLContextEventConstructor {
     prototype: WebGLContextEvent;
     new(type: string, eventInit?: WebGLContextEventInit): WebGLContextEvent;
-};
+}
 
 /** Part of the WebGL API and represents a collection of buffers that serve as a rendering destination. */
 interface WebGLFramebuffer {
@@ -15183,7 +15183,7 @@ interface WebGLFramebuffer {
 declare interface WebGLFramebufferConstructor {
     prototype: WebGLFramebuffer;
     new(): WebGLFramebuffer;
-};
+}
 
 /** The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). */
 interface WebGLProgram {
@@ -15192,7 +15192,7 @@ interface WebGLProgram {
 declare interface WebGLProgramConstructor {
     prototype: WebGLProgram;
     new(): WebGLProgram;
-};
+}
 
 interface WebGLQuery {
 }
@@ -15200,7 +15200,7 @@ interface WebGLQuery {
 declare interface WebGLQueryConstructor {
     prototype: WebGLQuery;
     new(): WebGLQuery;
-};
+}
 
 /** Part of the WebGL API and represents a buffer that can contain an image, or can be source or target of an rendering operation. */
 interface WebGLRenderbuffer {
@@ -15209,7 +15209,7 @@ interface WebGLRenderbuffer {
 declare interface WebGLRenderbufferConstructor {
     prototype: WebGLRenderbuffer;
     new(): WebGLRenderbuffer;
-};
+}
 
 /** Provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML <canvas> element. */
 interface WebGLRenderingContext extends WebGLRenderingContextBase, WebGLRenderingContextOverloads {
@@ -15514,7 +15514,7 @@ declare interface WebGLRenderingContextConstructor {
     readonly VERTEX_SHADER: GLenum;
     readonly VIEWPORT: GLenum;
     readonly ZERO: GLenum;
-};
+}
 
 interface WebGLRenderingContextBase {
     readonly canvas: HTMLCanvasElement;
@@ -15996,7 +15996,7 @@ interface WebGLSampler {
 declare interface WebGLSamplerConstructor {
     prototype: WebGLSampler;
     new(): WebGLSampler;
-};
+}
 
 /** The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders. */
 interface WebGLShader {
@@ -16005,7 +16005,7 @@ interface WebGLShader {
 declare interface WebGLShaderConstructor {
     prototype: WebGLShader;
     new(): WebGLShader;
-};
+}
 
 /** Part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getShaderPrecisionFormat() method. */
 interface WebGLShaderPrecisionFormat {
@@ -16017,7 +16017,7 @@ interface WebGLShaderPrecisionFormat {
 declare interface WebGLShaderPrecisionFormatConstructor {
     prototype: WebGLShaderPrecisionFormat;
     new(): WebGLShaderPrecisionFormat;
-};
+}
 
 interface WebGLSync {
 }
@@ -16025,7 +16025,7 @@ interface WebGLSync {
 declare interface WebGLSyncConstructor {
     prototype: WebGLSync;
     new(): WebGLSync;
-};
+}
 
 /** Part of the WebGL API and represents an opaque texture object providing storage and state for texturing operations. */
 interface WebGLTexture {
@@ -16034,7 +16034,7 @@ interface WebGLTexture {
 declare interface WebGLTextureConstructor {
     prototype: WebGLTexture;
     new(): WebGLTexture;
-};
+}
 
 interface WebGLTransformFeedback {
 }
@@ -16042,7 +16042,7 @@ interface WebGLTransformFeedback {
 declare interface WebGLTransformFeedbackConstructor {
     prototype: WebGLTransformFeedback;
     new(): WebGLTransformFeedback;
-};
+}
 
 /** Part of the WebGL API and represents the location of a uniform variable in a shader program. */
 interface WebGLUniformLocation {
@@ -16051,7 +16051,7 @@ interface WebGLUniformLocation {
 declare interface WebGLUniformLocationConstructor {
     prototype: WebGLUniformLocation;
     new(): WebGLUniformLocation;
-};
+}
 
 interface WebGLVertexArrayObject {
 }
@@ -16059,7 +16059,7 @@ interface WebGLVertexArrayObject {
 declare interface WebGLVertexArrayObjectConstructor {
     prototype: WebGLVertexArrayObject;
     new(): WebGLVertexArrayObject;
-};
+}
 
 interface WebGLVertexArrayObjectOES {
 }
@@ -16118,7 +16118,7 @@ declare interface WebSocketConstructor {
     readonly CLOSING: number;
     readonly CONNECTING: number;
     readonly OPEN: number;
-};
+}
 
 /** Events that occur due to the user moving a mouse wheel or similar input device. */
 interface WheelEvent extends MouseEvent {
@@ -16137,7 +16137,7 @@ declare interface WheelEventConstructor {
     readonly DOM_DELTA_LINE: number;
     readonly DOM_DELTA_PAGE: number;
     readonly DOM_DELTA_PIXEL: number;
-};
+}
 
 interface WindowEventMap extends GlobalEventHandlersEventMap, WindowEventHandlersEventMap {
     "devicemotion": DeviceMotionEvent;
@@ -16272,7 +16272,7 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
 declare interface WindowConstructor {
     prototype: Window;
     new(): Window;
-};
+}
 
 interface WindowEventHandlersEventMap {
     "afterprint": Event;
@@ -16373,7 +16373,7 @@ interface Worker extends EventTarget, AbstractWorker {
 declare interface WorkerConstructor {
     prototype: Worker;
     new(scriptURL: string | URL, options?: WorkerOptions): Worker;
-};
+}
 
 /** Available only in secure contexts. */
 interface Worklet {
@@ -16390,7 +16390,7 @@ interface Worklet {
 declare interface WorkletConstructor {
     prototype: Worklet;
     new(): Worklet;
-};
+}
 
 /** This Streams API interface provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing. */
 interface WritableStream<W = any> {
@@ -16403,7 +16403,7 @@ interface WritableStream<W = any> {
 declare interface WritableStreamConstructor {
     prototype: WritableStream;
     new <W = any>(underlyingSink?: UnderlyingSink<W>, strategy?: QueuingStrategy<W>): WritableStream<W>;
-};
+}
 
 /** This Streams API interface represents a controller allowing control of a WritableStream's state. When constructing a WritableStream, the underlying sink is given a corresponding WritableStreamDefaultController instance to manipulate. */
 interface WritableStreamDefaultController {
@@ -16413,7 +16413,7 @@ interface WritableStreamDefaultController {
 declare interface WritableStreamDefaultControllerConstructor {
     prototype: WritableStreamDefaultController;
     new(): WritableStreamDefaultController;
-};
+}
 
 /** This Streams API interface is the object returned by WritableStream.getWriter() and once created locks the < writer to the WritableStream ensuring that no other streams can write to the underlying sink. */
 interface WritableStreamDefaultWriter<W = any> {
@@ -16429,7 +16429,7 @@ interface WritableStreamDefaultWriter<W = any> {
 declare interface WritableStreamDefaultWriterConstructor {
     prototype: WritableStreamDefaultWriter;
     new <W = any>(stream: WritableStream<W>): WritableStreamDefaultWriter<W>;
-};
+}
 
 /** An XML document. It inherits from the generic Document and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents. */
 interface XMLDocument extends Document {
@@ -16442,7 +16442,7 @@ interface XMLDocument extends Document {
 declare interface XMLDocumentConstructor {
     prototype: XMLDocument;
     new(): XMLDocument;
-};
+}
 
 interface XMLHttpRequestEventMap extends XMLHttpRequestEventTargetEventMap {
     "readystatechange": Event;
@@ -16550,7 +16550,7 @@ declare interface XMLHttpRequestConstructor {
     readonly LOADING: number;
     readonly OPENED: number;
     readonly UNSENT: number;
-};
+}
 
 interface XMLHttpRequestEventTargetEventMap {
     "abort": ProgressEvent<XMLHttpRequestEventTarget>;
@@ -16579,7 +16579,7 @@ interface XMLHttpRequestEventTarget extends EventTarget {
 declare interface XMLHttpRequestEventTargetConstructor {
     prototype: XMLHttpRequestEventTarget;
     new(): XMLHttpRequestEventTarget;
-};
+}
 
 interface XMLHttpRequestUpload extends XMLHttpRequestEventTarget {
     addEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestUpload, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -16591,7 +16591,7 @@ interface XMLHttpRequestUpload extends XMLHttpRequestEventTarget {
 declare interface XMLHttpRequestUploadConstructor {
     prototype: XMLHttpRequestUpload;
     new(): XMLHttpRequestUpload;
-};
+}
 
 /** Provides the serializeToString() method to construct an XML string representing a DOM tree. */
 interface XMLSerializer {
@@ -16601,7 +16601,7 @@ interface XMLSerializer {
 declare interface XMLSerializerConstructor {
     prototype: XMLSerializer;
     new(): XMLSerializer;
-};
+}
 
 /** The XPathEvaluator interface allows to compile and evaluate XPath expressions. */
 interface XPathEvaluator extends XPathEvaluatorBase {
@@ -16610,7 +16610,7 @@ interface XPathEvaluator extends XPathEvaluatorBase {
 declare interface XPathEvaluatorConstructor {
     prototype: XPathEvaluator;
     new(): XPathEvaluator;
-};
+}
 
 interface XPathEvaluatorBase {
     createExpression(expression: string, resolver?: XPathNSResolver | null): XPathExpression;
@@ -16626,7 +16626,7 @@ interface XPathExpression {
 declare interface XPathExpressionConstructor {
     prototype: XPathExpression;
     new(): XPathExpression;
-};
+}
 
 /** The results generated by evaluating an XPath expression within the context of a given node. */
 interface XPathResult {
@@ -16664,7 +16664,7 @@ declare interface XPathResultConstructor {
     readonly STRING_TYPE: number;
     readonly UNORDERED_NODE_ITERATOR_TYPE: number;
     readonly UNORDERED_NODE_SNAPSHOT_TYPE: number;
-};
+}
 
 /** An XSLTProcessor applies an XSLT stylesheet transformation to an XML document to produce a new XML document as output. It has methods to load the XSLT stylesheet, to manipulate <xsl:param> parameter values, and to apply the transformation to documents. */
 interface XSLTProcessor {
@@ -16681,7 +16681,7 @@ interface XSLTProcessor {
 declare interface XSLTProcessorConstructor {
     prototype: XSLTProcessor;
     new(): XSLTProcessor;
-};
+}
 
 interface Console {
     assert(condition?: boolean, ...data: any[]): void;
@@ -16722,7 +16722,7 @@ declare namespace WebAssembly {
         prototype: CompileError;
         new(message?: string): CompileError;
         (message?: string): CompileError;
-    };
+    }
 
     interface Global {
         value: any;
@@ -16732,7 +16732,7 @@ declare namespace WebAssembly {
     var Global: {
         prototype: Global;
         new(descriptor: GlobalDescriptor, v?: any): Global;
-    };
+    }
 
     interface Instance {
         readonly exports: Exports;
@@ -16741,7 +16741,7 @@ declare namespace WebAssembly {
     var Instance: {
         prototype: Instance;
         new(module: Module, importObject?: Imports): Instance;
-    };
+    }
 
     interface LinkError extends Error {
     }
@@ -16750,7 +16750,7 @@ declare namespace WebAssembly {
         prototype: LinkError;
         new(message?: string): LinkError;
         (message?: string): LinkError;
-    };
+    }
 
     interface Memory {
         readonly buffer: ArrayBuffer;
@@ -16760,7 +16760,7 @@ declare namespace WebAssembly {
     var Memory: {
         prototype: Memory;
         new(descriptor: MemoryDescriptor): Memory;
-    };
+    }
 
     interface Module {
     }
@@ -16771,7 +16771,7 @@ declare namespace WebAssembly {
         customSections(moduleObject: Module, sectionName: string): ArrayBuffer[];
         exports(moduleObject: Module): ModuleExportDescriptor[];
         imports(moduleObject: Module): ModuleImportDescriptor[];
-    };
+    }
 
     interface RuntimeError extends Error {
     }
@@ -16780,7 +16780,7 @@ declare namespace WebAssembly {
         prototype: RuntimeError;
         new(message?: string): RuntimeError;
         (message?: string): RuntimeError;
-    };
+    }
 
     interface Table {
         readonly length: number;
@@ -16792,7 +16792,7 @@ declare namespace WebAssembly {
     var Table: {
         prototype: Table;
         new(descriptor: TableDescriptor, value?: any): Table;
-    };
+    }
 
     interface GlobalDescriptor {
         mutable?: boolean;
