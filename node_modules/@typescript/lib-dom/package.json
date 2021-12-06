@@ -1,0 +1,11 @@
+{
+  "name": "@orta/lib-dom-globals",
+  "version": "0.0.1",
+  "description": "An experiment in splitting the globals from the interfaces in the DOM types",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Orta Therox",
+  "license": "ISC"
+}
