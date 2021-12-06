@@ -1,4 +1,4 @@
-A project which has the [split types/vars branch](https://github.com/orta/orta-types-web-globals/blob/master/README.md) of TS DOM lib generator which integrates with the Node JS types.
+A project which has the [split types/vars branch](https://github.com/orta/orta-types-web-globals/blob/master/README.md) of TS DOM lib generator which integrates with the Node JS types. [See this thread](https://github.com/microsoft/TypeScript/issues/43972#issuecomment-986887338)
 
 Changes to [node's types](node_modules/@types/node/globals.d.ts):
 
