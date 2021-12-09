@@ -7,7 +7,7 @@ Changes to [node's types](node_modules/@types/node/globals.d.ts):
 + /// <reference path="../../@typescript/lib-dom/types.d.ts" />
 
 // Real world:
-+ /// <reference lib="dom/types" />
++ /// <reference lib="dom-types" />
 
 
 + declare var AbortController: AbortControllerConstructor
