@@ -3,7 +3,12 @@ A project which has the [split types/vars branch](https://github.com/orta/orta-t
 Changes to [node's types](node_modules/@types/node/globals.d.ts):
 
 ```diff
+// For me in here:
 + /// <reference path="../../@typescript/lib-dom/types.d.ts" />
+
+// Real world:
++ /// <reference lib="dom/types" />
+
 
 + declare var AbortController: AbortControllerConstructor
 - declare var AbortController: {
